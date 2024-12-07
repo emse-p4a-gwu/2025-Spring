@@ -7,6 +7,20 @@ project:
   render:
     - "*.qmd"
     - "!fragments/"
+    - "!1-getting-started"
+    - "!2-functions-packages"
+    - "!3-creating-functions"
+    - "!4-conditionals-testing"
+    - "!5-iteration"
+    - "!6-vectors"
+    - "!7-strings"
+    - "!8-data-frames"
+    - "!9-data-wrangling"
+    - "!10-data-visualization"
+    - "!11-programming-with-data"
+    - "!12-webscraping"
+    - "!13-monte-carlo-methods"
+    - "!14-final-review"
   resources:
     - "class/"
     - "rubrics/"
@@ -83,7 +97,7 @@ website:
             href: https://github.com/emse-p4a-gwu/2025-Spring
   page-footer:
     center:
-      - text: "© 2025 John Paul Helveston <a href='LICENSE.html'><i class='fab fa-creative-commons'></i><i class='fab fa-creative-commons-by'></i><i class='fab fa-creative-commons-sa'></i></a><br><i class='far fa-calendar-alt'></i> {{< var weekday >}} | <i class='far fa-clock'></i> {{< var time >}} | <a href='{{< var room_url >}}'><i class='fa fa-map-marker-alt'></i> {{< var room >}}</a> | <a href='https://www.jhelvy.com'><i class='fas fa-user'></i> Dr. John Paul Helveston</a> | <a href='mailto:{{< var email >}}'><i class='fas fa-envelope'></i> {{< var email >}}</a> | <a href='{{< var repo >}}'><i class='fab fa-github'></i></a>"
+      - text: "© 2025 John Paul Helveston {{< fa creative-commons-sa >}} <a href='LICENSE.html'><i class='fab fa-creative-commons'></i><i class='fab fa-creative-commons-by'></i><i class='fab fa-creative-commons-sa'></i></a><br><i class='far fa-calendar-alt'></i> {{< var weekday >}} | <i class='far fa-clock'></i> {{< var time >}} | <a href='{{< var room_url >}}'><i class='fa fa-map-marker-alt'></i> {{< var room >}}</a><br><a href='https://www.jhelvy.com'><i class='fas fa-user'></i> Dr. John Paul Helveston</a> | <a href='mailto:{{< var email >}}'><i class='fas fa-envelope'></i> {{< var email >}}</a> | <a href='{{< var repo >}}'><i class='fab fa-github'></i></a>"
 
 format:
   html:
@@ -93,6 +107,8 @@ format:
     smooth-scroll: true
     link-external-newwindow: true
     link-external-icon: false
+    # This is to include fontawesome icons
+    include-in-header: "_includes/header.html"
 
 filters:
     - schedule.lua

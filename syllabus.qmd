@@ -18,7 +18,7 @@ Instructor | Course
 <i class="bi-building-fill"></i> Science & Engineering Hall, 2830 | <i class="bi-geo-alt-fill"></i> [{{< var room >}}]({{< var room_url >}})
 <i class="bi-telephone-fill"></i> +1 (202) 994-7173 | <i class="bi-calendar-week-fill"></i> {{< var dates >}}
 <i class="bi-envelope-fill"></i> [{{< var email >}}](mailto:{{< var email >}}) | <i class="bi-clock-fill"></i> {{< var time >}}
-<i class="bi-twitter"></i> [\@JohnHelveston](https://twitter.com/JohnHelveston) | <i class="bi-slack"></i> [Slack]({{< var slack >}}){target="_blank"}
+<i class="fa fa-brands fa-bluesky"></i> [\@jhelvy.bsky.social]({{< var bluesky >}}) | <i class="bi-slack"></i> [Slack]({{< var slack >}}){target="_blank"}
 </div>
 
 ## Course Description
@@ -100,7 +100,7 @@ Quizzes are **short** (10 minutes) and are designed to test for fluency and to d
 
 There will be one midterm exam covering the first 6 weeks of class, and a standard final exam during the final exam period at the end of the semester covering material from the entire semester. See the [schedule](schedule.html) for details.
 
-## Typing Challenge
+# Typing Bonus Challenge
 
 You can earn a 1% bonus to your final grade by beating Professor Helveston in a speed typing challenge.
 
@@ -109,13 +109,19 @@ You can earn a 1% bonus to your final grade by beating Professor Helveston in a 
 - If you type faster than Professor Helveston in a 30 second head-to-head competition on [monkeytype.com](https://monkeytype.com/), you'll earn the bonus.
 - You may challenge Professor Helveston up to two times in one semester, but you may only win the bonus once.
 - To challenge Professor Helveston, send him a direct message on Slack saying "I accept your challenge!", then we will work out a time and place to carry out the challenge.
-- If you lose the challenge, there will be no consequences other than the benefit of having (hopefully) improved your typing speed.
+- If you lose the challenge, there will be no consequences other than the benefit of having (hopefully) improved your typing speed by practicing to beat Professor Helveston.
 
 **Wait, are you serious?** Yes, I'm 100% serious.
 
-**Why tho?** Not being able to [touch type](https://en.wikipedia.org/wiki/Touch_typing) can be a real hindrance when it comes to using a computer, and it's especially important in a coding class where we will be typing a lot. Improving your typing speed and accuracy will not only improve your coding productivity, but also your productivity with pretty much everything else you do on a computer (like writing). By putting this challenge in place, my goal is that you will spend a little time practicing your typing.
+**Why tho?** Not being able to [touch type](https://en.wikipedia.org/wiki/Touch_typing) can be a real hindrance when it comes to using a computer, and especially when learning to code. Coding requires you to use a lot more than just the letter keys (lots of symbols, brackets, etc.), and knowing how to touch type will make it less frustrating when you're learning where all those other keys are. By putting this challenge in place, my goal is that you will spend a little time practicing your typing.
 
-**How can I get better at typing**? I recommend using [keybr.com](https://www.keybr.com/) and setting ~60 words per minute as a reasonable target (~90 if you want to beat Professor Helveston). It's well worth the effort, and if you spend a little time each day you'll see improvement. Consistency is more important than length of time in any one practice session. Also, if you create an account and track your typing progress, I'll also consider your progress for the challenge. That is, even if you lose the challenge but can demonstrate significant progress in your typing speed, I'll take that into consideration as to whether to award you the bonus.
+**Alternative challenge**: If you can show me evidence that you substantially improved your words per minute (WPM) typing speed over the semester, you can still qualify for for the typing bonus. Rules:
+
+1. _No cheating_:  No pretending to type slowly and then type fast later in the semester, etc. Be honest. 
+2. _Show consistent progress_: Show me a record of continual progress throughout the semester.
+3. _At least 30 WPM improvement_: Show evidence that you have improved your WPM typing speed by at least 30 WPM since the start of the semester. 
+
+**How can I get better at typing**? I recommend using [keybr.com](https://www.keybr.com/) and setting ~60 words per minute as a reasonable target (~90 if you want to have a chance at beating Professor Helveston). It's well worth the effort, and if you spend a little time each day you'll see improvement. Consistency is more important than length of time in any one practice session. Create an account and track your typing progress. It works, I promise you.
 
 # Grading
 

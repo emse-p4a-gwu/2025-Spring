@@ -33,7 +33,7 @@ If you're submitting late, please **send your submission to Professor Helveston 
 
 ## Can I make up a quiz if I'm late or miss class?
 
-Usually **no**. See the [policy in the syllabus](syllabus.html#quizzes) on this.
+**No** - see the [policy in the syllabus](syllabus.html#quizzes) on this for any exception.
 
 # R / RSTUDIO STUFF
 
