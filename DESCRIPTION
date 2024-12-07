@@ -18,5 +18,6 @@ Imports:
     kableExtra,
     knitr,
     rmarkdown,
+    tidyverse,
     xaringanExtra,
     viridis
