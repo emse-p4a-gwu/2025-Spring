@@ -1,8 +1,0 @@
----
-title: "Data Wrangling"
-params:
-  class: "9-data-wrangling"
----
-
-```{r child = here::here("fragments", "placeholder.qmd")}
-```

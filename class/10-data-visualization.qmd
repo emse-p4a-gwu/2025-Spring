@@ -1,8 +1,0 @@
----
-title: "Data Visualization"
-params:
-  class: "10-data-visualization"
----
-
-```{r child = here::here("fragments", "placeholder.qmd")}
-```

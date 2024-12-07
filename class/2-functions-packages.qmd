@@ -1,8 +1,0 @@
----
-title: "Functions & Packages"
-params:
-  class: "2-functions-packages"
----
-
-```{r child = here::here("fragments", "placeholder.qmd")}
-```
