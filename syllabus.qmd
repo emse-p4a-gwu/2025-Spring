@@ -88,11 +88,13 @@ In addition to weekly homework assignments, students are expected to read throug
 
 ## Quizzes
 
-There will be 7 quizzes given about once every other week immediately at the beginning of class. Please show up on time to class each week to ensure that you do not miss a quiz.
+There will be 10 short quizzes throughout the semester, each given immediately at the beginning of class. Please show up on time to class each week to ensure that you do not miss a quiz.
 
-**Make up quizzes are not available** if you miss it or are late to class. If you arrive late, you will be allowed to take the quiz in the remaining time left. Make ups will only be allowed for excused absences that are discussed and agreed upon with the professor prior to class. If you contact the professor after class for a make up, it will not be granted under any circumstances. If you cannot make it to class because of an emergency, you should notify the professor **before** class.
+Quizzes are **short** (10 minutes) and are designed to test for fluency and to demonstrate where additional study is needed. They will cover material presented in previous classes and assignments during the weeks since the most-recent quiz. Quizzes are also relatively low-stakes - your worst two are dropped, and the rest count for a relatively smaller portion of your final grade. If you do poorly on one or two, use that as feedback on where you need additional improvement. 
 
-Quizzes are **short** (10 minutes) and are designed to test for fluency and to demonstrate where additional study is needed. They will cover material presented in previous classes and assignments during the weeks since the most-recent quiz. **Quizzes are low-stakes** - your worst one is dropped, and the rest count for a small portion of your final grade. If you do poorly on one or two, use that as feedback on where you need additional improvement.
+**The best way to ensure you do well on quizzes is to be active in class and complete you assignments on time**
+
+**Make up quizzes are not available**. If you arrive late, you can take the quiz in the remaining time left, but you will not be given additional time. Make ups will only be allowed for excused absences that are discussed and agreed upon with the professor _prior_ to class. If you contact the professor after class for a make up, it will not be granted unless a true emergency prevented you from attending class that could not have been communicated earlier. If you have an excused absence you expect, you must notify the professor **before** class to schedule a make up.
 
 > **Why quiz at all?** Research shows that giving small quizzes throughout a class can dramatically help with *retention*. It's a phenomenon known as the "retrieval effect" - basically, you have to _practice_ remembering things, otherwise your brain won't remember them. The phenomenon and research on it is explained in detail in the book ["Make It Stick: The Science of Successful Learning,"](https://www.hup.harvard.edu/catalog.php?isbn=9780674729018) by Brown, Roediger, and McDaniel.
 
@@ -132,9 +134,9 @@ Final grades will be calculated as follows:
 <div style="width:500px">
 Component                  | Weight | Notes
 ---------------------------|--------|----------------
-Participation / Attendance | 7%     | (Yes, I take attendance)
-Homeworks & Readings (13x) | 48%    | Lowest 1 dropped
-Quizzes (7x)               | 15%    | Lowest 2 dropped
+Participation / Attendance | 6%     | (Yes, I take attendance)
+Homeworks & Readings (13x) | 46%    | Lowest 1 dropped
+Quizzes (10x)              | 18%    | Lowest 2 dropped
 Midterm Exam               | 10%    |
 Final Exam                 | 20%    |
 </div>
@@ -154,9 +156,9 @@ library(ggrepel)
 
 df <- data.frame(
     category = c(
-      'Participation', 'Homeworks & Readings', 'Quizzes', 'Midterm', 'Final'
+      'Participation', 'Homeworks', 'Quizzes', 'Midterm', 'Final'
     ),
-    percent = c(7, 48, 15, 10, 20)) %>%
+    percent = c(6, 46, 18, 10, 20)) %>%
     arrange(desc(percent)) %>%
     mutate(
       cumpercent = cumsum(percent),
