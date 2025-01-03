@@ -86,6 +86,8 @@ Using `map()`,  write R code to obtain a vector of the number of times the word 
 As we saw in class, the `sw_people` list contains a list of information about each character in Star Wars. You can load the list from the `repurrrsive` package:
 
 ```{r}
+#| eval: false
+
 library(repurrrsive)
 ```
 
