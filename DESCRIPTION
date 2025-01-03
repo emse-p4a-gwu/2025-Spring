@@ -17,6 +17,7 @@ Imports:
     gsheet,
     kableExtra,
     knitr,
+    nycflights13,
     rmarkdown,
     tidyverse,
     xaringanExtra,
