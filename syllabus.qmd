@@ -134,8 +134,8 @@ Final grades will be calculated as follows:
 <div style="width:500px">
 Component                  | Weight | Notes
 ---------------------------|--------|----------------
-Participation / Attendance | 6%     | (Yes, I take attendance)
-Homeworks & Readings (13x) | 46%    | Lowest 1 dropped
+Participation / Attendance | 7%     | (Yes, I take attendance)
+Homeworks & Readings (13x) | 45%    | Lowest 1 dropped
 Quizzes (10x)              | 18%    | Lowest 2 dropped
 Midterm Exam               | 10%    |
 Final Exam                 | 20%    |
@@ -147,6 +147,7 @@ Here's a visual breakdown by category:
 #| echo: false
 #| label: grades
 #| fig.height: 3
+#| fig.width: 6
 #| fig.align: 'left'
 
 library(tidyverse)
@@ -158,28 +159,34 @@ df <- data.frame(
     category = c(
       'Participation', 'Homeworks', 'Quizzes', 'Midterm', 'Final'
     ),
-    percent = c(6, 46, 18, 10, 20)) %>%
+    percent = c(7, 45, 18, 10, 20) / 100) %>%
     arrange(desc(percent)) %>%
     mutate(
       cumpercent = cumsum(percent),
-      label_y = cumpercent - (percent / 2),
+      label = cumpercent - (percent / 2),
       category = fct_reorder(category, percent))
 
 ggplot(df) +
     geom_col(
-        aes(x = "", y = percent, fill = category),
+        aes(y = "", x = percent, fill = category),
         width = 1.1, alpha = 0.8
     ) +
     geom_label_repel(
-        aes(x = "", y = label_y, label = category),
+        aes(y = "", x = label, label = category),
         direction = 'y', label.padding = 0.25, segment.size = 0
     ) +
-    coord_flip() +
-    scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
-    scale_fill_viridis(discrete = TRUE) +
+    scale_x_continuous(
+      labels = scales::percent,
+      expand = expansion(mult = c(0, 0.05))
+    ) +
+    scale_fill_viridis(
+      option = 'inferno', 
+      discrete = TRUE, 
+      direction = -1
+    ) +
     theme_minimal_vgrid() +
     theme(legend.position = 'none') +
-    labs(y = 'Percent of final grade', x = NULL)
+    labs(x = 'Percent of final grade', y = NULL)
 ```
 
 ## AMG Grading
