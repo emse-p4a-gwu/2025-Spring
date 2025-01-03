@@ -74,3 +74,8 @@ tr:last-child {
   color: #cbcccc;
 }
  
+.shadow-wrapper {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  border-radius: 4px;
+}

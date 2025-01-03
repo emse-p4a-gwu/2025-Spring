@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homework 1 - Getting Started – EMSE 4571 / 6571</title>
+<title>Homework 7 - Strings – EMSE 4571 / 6571</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,12 +111,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Homework 1 - Getting Started – EMSE 4571 / 6571">
+<meta property="og:title" content="Homework 7 - Strings – EMSE 4571 / 6571">
 <meta property="og:description" content="Course website for Spring 2025 semester of the EMSE course “Intro. to Programming for Analytics” at GWU">
 <meta property="og:image" content="https://p4a.seas.gwu.edu/2025-Spring/hw/images/logo.png">
 <meta property="og:site_name" content="https://p4a.seas.gwu.edu/">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="Homework 1 - Getting Started – EMSE 4571 / 6571">
+<meta name="twitter:title" content="Homework 7 - Strings – EMSE 4571 / 6571">
 <meta name="twitter:description" content="Course website for Spring 2025 semester of the EMSE course “Intro. to Programming for Analytics” at GWU">
 <meta name="twitter:image" content="https://p4a.seas.gwu.edu/2025-Spring/hw/images/logo-square.png">
 <meta name="twitter:creator" content="@johnhelveston">
@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 1 - Getting Started</h1>
+<h1 class="title">Homework 7 - Strings</h1>
 </div>
 
 
@@ -299,22 +299,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <blockquote class="blockquote">
-<p><strong>Due</strong>: Jan 21 by 11:59pm</p>
+<p><strong>Due</strong>: Mar 18 by 11:59pm</p>
 <p><strong>Weight</strong>: This assignment is worth 3.75% of your final grade.</p>
-<p><strong>Purpose</strong>: The purposes of this assignment are to:</p>
+<p><strong>Purpose</strong>: The purposes of this assignment are:</p>
 <ul>
-<li>Make sure you understand what you need to do to succeed in this class</li>
-<li>Make sure you have properly set up the software and tools we will use this semester</li>
-<li>Get started practicing basic concepts with R.</li>
-</ul>
-<p><strong>Skills &amp; Knowledge</strong>: After completing these exercises, you should:</p>
-<ul>
-<li>Be familiar with the main course tools: Slack, R, and RStudio.</li>
-<li>Be familiar how to use R projects to stay organized.</li>
-<li>Be able to use R to create and store values as objects with meaningful names.</li>
-<li>Know how to compare values in R.</li>
-<li>Know how to use arithmetic, relational, and logical operators in R.</li>
-<li>Know the distinctions between how R handles different types of data types (numbers, strings, &amp; logicals).</li>
+<li>To practice manipulating strings in R with the <strong>stringr</strong> package.</li>
+<li>To practice computational problem solving with strings.</li>
 </ul>
 <p><strong>Assessment</strong>: Each question indicates the % of the assignment grade, summing to 100%. The credit for each question will be assigned as follows:</p>
 <ul>
@@ -335,91 +325,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The readings from the last week will serve as a helpful reference as you complete this assignment. You can review them here:</p>
 <blockquote class="blockquote">
 <div class="cell" data-layout-align="center">
-<a href="https://p4a.jhelvy.com/getting-started.html" target="_blank"><b>Getting Started</b></a><br><a href="https://p4a.jhelvy.com/operators-data-types.html" target="_blank"><b>Operations &amp; Data Types</b></a>
+<a href="https://p4a.jhelvy.com/strings.html" target="_blank"><b>Strings</b></a>
 </div>
 </blockquote>
 </section>
-<section id="class-setup-solo-10" class="level3">
-<h3 class="anchored" data-anchor-id="class-setup-solo-10">1) Class setup [SOLO, 10%]</h3>
-<p>For this class, you’ll need to install some software and register for some tools. You should have already done this, but in case you haven’t,go to the course <a href="../software.html">software</a> page to get set up.</p>
-<p>Once you have joined the <a href="https://emse-p4a-s25.slack.com">class slack</a>, make a post to the <code>#welcome</code> channel introducing yourself - provide your name, year / program, and something interesting about yourself.</p>
-</section>
-<section id="getting-familiar-with-the-course-solo-10" class="level3">
-<h3 class="anchored" data-anchor-id="getting-familiar-with-the-course-solo-10">2) Getting familiar with the course [SOLO, 10%]</h3>
-<p>Follow <a href="https://www.youtube.com/watch?v=Tnlaokj1opA">Snoop’s advice</a> and read the entire <a href="../syllabus.html">Course Syllabus</a> (actually read the whole thing). Then review the <a href="../schedule.html">schedule</a> and make sure to note important upcoming deadlines.</p>
-</section>
-<section id="staying-organized-solo-10" class="level3">
-<h3 class="anchored" data-anchor-id="staying-organized-solo-10">3) Staying organized [SOLO, 10%]</h3>
-<p>Open RStudio and create a new R project called “hw1” (see the <a href="https://p4a.jhelvy.com/getting-started.html#rstudio-projects" target="_blank">reading</a> for details on how to do this). Within your project, create a new R <em>script</em> (a “.R” file) and save it as “hw1.R”. When you save it, it should show up in the R project folder you just created. Finally, copy the following code to the top of this script and fill out your name, netID, and the names of anyone you worked with on this assignment (your netID is the part of your email address before <code>"@gwu.edu"</code>):</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Name:  Last, First</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># netID: Insert your netID here</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># I worked with the following classmates on this assignment:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Name: Last, First</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Name: Last, First</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Write your responses to all other questions in this assignment in your R file.</p>
-</section>
-<section id="objects-operators-converting-time-collaborative-20" class="level3">
-<h3 class="anchored" data-anchor-id="objects-operators-converting-time-collaborative-20">4) Objects &amp; Operators: Converting Time [COLLABORATIVE, 20%]</h3>
-<p>Create objects to store each of the following two values - be sure to use <a href="https://p4a.jhelvy.com/getting-started.html#use-meaningful-variable-names" target="_blank">meaningful variable names</a> when creating your objects:</p>
+<section id="staying-organized-solo-5" class="level3">
+<h3 class="anchored" data-anchor-id="staying-organized-solo-5">1) Staying organized [SOLO, 5%]</h3>
+<p>Download and use <a href="templates/hw7.zip">this template</a> for your assignment. Inside the “hw7” folder, open and edit the R script called “hw7.R” and fill out your name, GW Net ID, and the names of anyone you worked with on this assignment.</p>
+<blockquote class="blockquote">
+<h3 id="writing-test-functions" class="anchored"><strong>Writing test functions</strong></h3>
+<p>For each of the following functions, write a test function first, and then write the function. <strong>Your test functions will count for half of the available credit for each problem</strong>. Think carefully about the test cases to include in your test functions.</p>
+</blockquote>
+<blockquote class="blockquote">
+<h3 id="using-good-style" class="anchored"><strong>Using good style</strong></h3>
+<p>For this assignment, you must use good style to receive full credit. Follow the best practices described in <a href="http://adv-r.had.co.nz/Style.html">this style guide</a>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<h3 id="using-the-autograder" class="anchored">Using the <a href="../autograder.html">autograder</a></h3>
 <ul>
-<li>The number of seconds in a minute</li>
-<li>The number of minutes in an hour</li>
-<li>The number of hours in a day</li>
-<li>The number of days in a typical year (not a leap year)</li>
+<li>You can check your solutions to problems 2 - 8 by logging into the <a href="../autograder.html">autograder</a> and uploading your <code>hw7.R</code> file.</li>
+<li><strong>The file must be named <code>hw7.R</code> or it won’t work.</strong></li>
+<li>Your user name is your netID, and your password is inside the <code>readme.txt</code> file in the Box folder I shared with you.</li>
 </ul>
-<p>Now, say you have another object called <code>time_in_seconds</code> that contains an integer number of seconds (for example, <code>time_in_seconds &lt;- 8675309</code>). Write code to convert the value stored in <code>time_in_seconds</code> into the units described below. Your solution may only use arithmetic operators and the objects you created (i.e.&nbsp;you may <strong>not</strong> use any numbers). You may also use the new objects you create in sequential order. For example, you may use the object created in part a) to create the object in part b), and so on.</p>
-<ol type="a">
-<li>The value of <code>time_in_seconds</code> in minutes</li>
-<li>The value of <code>time_in_seconds</code> in hours</li>
-<li>The value of <code>time_in_seconds</code> in days</li>
-<li>The value of <code>time_in_seconds</code> in years</li>
-</ol>
+</blockquote>
 </section>
-<section id="logical-and-relational-operators-solo-20" class="level3">
-<h3 class="anchored" data-anchor-id="logical-and-relational-operators-solo-20">5) Logical and relational operators [SOLO, 20%]</h3>
-<p>Consider the following objects:</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Write code to answer the following questions:</p>
-<ol type="a">
-<li>Write a statement with <em>logical</em> operators that compares the objects <code>x</code>, <code>y</code>, and <code>z</code> and returns <code>TRUE</code></li>
-<li>Write a statement with <em>logical</em> operators that compares the objects <code>x</code>, <code>y</code>, and <code>z</code> and returns <code>FALSE</code></li>
-<li>Fill in <em>relational</em> operators to make the following statement return <code>TRUE</code>:</li>
-</ol>
-<p><code>! (x __ y) &amp; ! (z __ y)</code></p>
-<ol start="4" type="a">
-<li>Fill in <em>relational</em> operators to make this statement return <code>FALSE</code>:</li>
-</ol>
-<p><code>! (w __ y) | (z __ y)</code></p>
+<section id="strtolowers-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="strtolowers-solo-10">2) <code>strToLower(s)</code> [SOLO, 10%]</h3>
+<p>Write a function that does exactly what <code>str_to_lower()</code> does (i.e.&nbsp;returns the same string but with all letters in lower case) without using <code>str_to_lower()</code> or the Base R <code>tolower()</code> function. Hint: check out the <code>str_replace_all()</code> function!</p>
 </section>
-<section id="data-types-collaborative-20" class="level3">
-<h3 class="anchored" data-anchor-id="data-types-collaborative-20">6) Data types [COLLABORATIVE, 20%]</h3>
-<p>Consider the following objects:</p>
+<section id="rotatestringlefts-k-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="rotatestringlefts-k-collaborative-15">3) <code>rotateStringLeft(s, k)</code> [COLLABORATIVE, 15%]</h3>
+<p>Write the function <code>rotateStringLeft(s, k)</code> that takes a string <code>s</code> and a non-negative integer <code>k</code>, and returns the string <code>s</code> rotated <code>k</code> places to the left. So, if <code>s = "iknowkungfu"</code> and <code>k = 2</code>, then the result should be <code>"nowkungfuik"</code>. If <code>k</code> is larger than the length of <code>s</code>, the function should continue to rotate the string beyond its starting point. So, if <code>s = "iknowkungfu"</code> and <code>k = 11</code>, then the result should be <code>"iknowkungfu"</code>, but if <code>k = 12</code>, the result should be <code>"knowkungfui"</code>.</p>
+</section>
+<section id="isdigits-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="isdigits-collaborative-15">4) <code>isDigit(s)</code> [COLLABORATIVE, 15%]</h3>
+<p>Write the function <code>isDigit(s)</code> that takes a string <code>s</code> and returns <code>TRUE</code> if all characters in the string are numeric integers and <code>FALSE</code> otherwise. So <code>isDigit("123")</code> should return <code>TRUE</code>, <code>isDigit("123N")</code> should return <code>FALSE</code>, and <code>isDigit("")</code> should return <code>FALSE</code>. Hint: the value <code>'\\d'</code> can be used to search for whether a string has as digit, so <code>str_detect("r2d2", '\\d')</code> would return <code>TRUE</code> but <code>str_detect("rd", '\\d')</code> would return <code>FALSE</code>.</p>
+</section>
+<section id="getthegerundssentence-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="getthegerundssentence-collaborative-15">5) <code>getTheGerunds(sentence)</code> [COLLABORATIVE, 15%]</h3>
+<p>Write a function that takes a single string, <code>sentence</code>, and returns a vector of all the gerunds in it (i.e.&nbsp;all the words that end in <code>"ing"</code>). So <code>getTheGerunds("I like hiking and swimming")</code> should return <code>c("hiking", "swimming")</code>. If there are no gerunds in <code>sentence</code>, the function should return <code>NULL</code>. Hint: first solve how you might separate a single-string sentence into a vector of words.</p>
+</section>
+<section id="lettercounts-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="lettercounts-collaborative-15">6) <code>letterCount(s)</code> [COLLABORATIVE, 15%]</h3>
+<p>Write the function <code>letterCount(s)</code> that takes a string <code>s</code> and returns a named vector with the count of each letter in <code>s</code>, spanning the alphabet. If a letter does not appear in <code>s</code>, it should have a value of <code>0</code>. You may assume that <code>s</code> only contains upper and/or lower case letters. You should ignore cases, so <code>"a"</code> and <code>"A"</code> should be both treated as <code>"a"</code>.</p>
+<p>For example, <code>letterCount("aaaaabbbc")</code> should return:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>number    <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="st">'3'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>character <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="dv">7</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>false     <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="st">"FALSE"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>true      <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">3</span> <span class="dv">1</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Write code to answer the following questions:</p>
-<ol type="a">
-<li>Write a statement with both <em>relational</em> &amp; <em>logical</em> operators that compares the four objects <code>number</code>, <code>character</code>, <code>false</code>, and <code>true</code> and returns <code>TRUE</code>.</li>
-<li>Write a statement with both <em>relational</em> &amp; <em>logical</em> operators that compares the four objects <code>number</code>, <code>character</code>, <code>false</code>, and <code>true</code> and returns <code>FALSE</code>.</li>
-</ol>
+<p>And <code>letterCount("someString")</code> should return:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">1</span> <span class="dv">0</span> <span class="dv">1</span> <span class="dv">0</span> <span class="dv">1</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">1</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="samecharss1-s2-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="samecharss1-s2-collaborative-15">7) <code>sameChars(s1, s2)</code> [COLLABORATIVE, 15%]</h3>
+<p>Write the function <code>sameChars(s1, s2)</code> that takes two strings and returns <code>TRUE</code> if the two strings are composed of the same characters (though perhaps in different orders); that is, if every character that is in the first string is in the second (and vice versa), return <code>TRUE</code>, otherwise return <code>FALSE</code>. Assume that <code>s1</code> and <code>s2</code> are both strings. This test is case-sensitive, so <code>"ABC"</code> and <code>"abc"</code> do not contain the same characters. The function returns <code>FALSE</code> if either parameter is not a string, but returns <code>TRUE</code> if both strings are empty.</p>
 </section>
 <section id="read-and-reflect-solo-10" class="level3">
-<h3 class="anchored" data-anchor-id="read-and-reflect-solo-10">7) Read and reflect [SOLO, 10%]</h3>
+<h3 class="anchored" data-anchor-id="read-and-reflect-solo-10">8) Read and reflect [SOLO, 10%]</h3>
+<p>When we come back from spring break, we’ll be shifting the focus of the class to working with data.</p>
 <p>Read and reflect on the following readings to preview what we will be covering next:</p>
 <blockquote class="blockquote">
 <div class="cell" data-layout-align="center">
-<a href="https://p4a.jhelvy.com/functions-packages.html" target="_blank"><b>Functions &amp; Packages</b></a>
+<a href="https://p4a.jhelvy.com/data-analysis.html" target="_blank"><b>Data Analysis</b></a><br><a href="https://p4a.jhelvy.com/data-frames.html" target="_blank"><b>Data Frames</b></a>
 </div>
 </blockquote>
 <p>Afterwards, reflect on what you’ve learned while going through these readings and exercises. Is there anything that jumped out at you? Anything you found particularly interesting or confusing?</p>
@@ -433,7 +403,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="submit" class="level3">
 <h3 class="anchored" data-anchor-id="submit">Submit</h3>
-<p><a href="https://p4a.seas.gwu.edu/2024-Spring/faq.html#how-do-i-make-a-zip-file-for-my-homework">Create a zip file</a> of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.</p>
+<p><a href="https://p4a.seas.gwu.edu/2025-Spring/faq.html#how-do-i-make-a-zip-file-for-my-homework">Create a zip file</a> of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.</p>
+<hr>
+</section>
+<section id="bonus-1-hasbalancedparenthesess-solo-3" class="level3">
+<h3 class="anchored" data-anchor-id="bonus-1-hasbalancedparenthesess-solo-3">Bonus 1) <code>hasBalancedParentheses(s)</code> [SOLO, 3%]</h3>
+<p>Write the function <code>hasBalancedParentheses(s)</code>, which takes a string <code>s</code> and returns <code>TRUE</code> if the parentheses in <code>s</code> are balanced and <code>FALSE</code> otherwise (ignoring all non-parentheses in the string). We say that parentheses are “balanced” if each right parenthesis closes (matches) an open (unmatched) left parenthesis, and no left parentheses are left unclosed (unmatched) at the end of the text. So, for example, <code>"( ( ( ) ( ) ) ( ) )"</code> is balanced, but <code>"( ) )"</code> is not balanced, and <code>"( ) ) ("</code> is also not balanced. Hint: keep track of how many right parentheses remain unmatched as you iterate over the string.</p>
 
 
 </section>
@@ -873,7 +848,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
  © 2025 John Paul Helveston  <a href="LICENSE.html"><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i><i class="fab fa-creative-commons-sa"></i></a><br><i class="far fa-calendar-alt"></i> Thursdays | <i class="far fa-clock"></i> 12:45PM - 3:15PM EST | <a href="https://it.gwu.edu/classroom-search/tompkins-hall-201"><i class="fa fa-map-marker-alt"></i> Tompkins 201</a><br><a href="https://www.jhelvy.com"><i class="fas fa-user"></i> Dr. John Paul Helveston</a> | <a href="mailto:jph@gwu.edu"><i class="fas fa-envelope"></i> jph@gwu.edu</a> | <a href="https://github.com/emse-p4a-gwu/2025-Spring"><i class="fab fa-github"></i></a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/emse-p4a-gwu/2025-Spring/edit/main/hw/1-getting-started.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/emse-p4a-gwu/2025-Spring/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/emse-p4a-gwu/2025-Spring/edit/main/hw/7-strings-temp.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/emse-p4a-gwu/2025-Spring/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
