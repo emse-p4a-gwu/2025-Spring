@@ -1223,7 +1223,7 @@ x$numbers
 
 ---
 
-# [HW 6](https://p4a.seas.gwu.edu/2024-Spring/hw/6-vectors.html)
+# [HW 6](https://p4a.seas.gwu.edu/2025-Spring/hw/6-vectors.html)
 
 --
 
