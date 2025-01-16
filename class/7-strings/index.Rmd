@@ -1094,9 +1094,9 @@ countdown(
 
 ---
 
-### [Homework 7](https://p4a.seas.gwu.edu/2024-Spring/hw/7-strings.html)
+### [Homework 7](https://p4a.seas.gwu.edu/2025-Spring/hw/7-strings.html)
 
-- Deadline extended one week to the Wednesday _after_ the midterm: **March 13**
+- Deadline is _after_ the midterm: **March 18**
 
 --
 

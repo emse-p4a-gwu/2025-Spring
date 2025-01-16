@@ -1075,7 +1075,7 @@ ggplot(msleep, aes(x=brainwt, y=bodywt)) +
 
 ---
 
-# A note about [HW 8](https://p4a.seas.gwu.edu/2024-Spring/hw/8-data-frames.html)
+# A note about [HW 8](https://p4a.seas.gwu.edu/2025-Spring/hw/8-data-frames.html)
 
 - You have what you need to start now.
 - It will be _much_ easier if you use the **dplyr** functions (i.e. read ahead). Feel free to try using them on this assignment.

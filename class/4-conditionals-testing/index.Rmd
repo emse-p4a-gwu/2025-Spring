@@ -1120,6 +1120,6 @@ Hint: it may be helpful to write an additional function called `isEvenNumber(x)`
 
 ---
 
-# [HW 4](https://p4a.seas.gwu.edu/2024-Spring/hw/4-conditionals-testing.html)
+# [HW 4](https://p4a.seas.gwu.edu/2025-Spring/hw/4-conditionals-testing.html)
 
 ## You'll need to write a _test function_ for each function!

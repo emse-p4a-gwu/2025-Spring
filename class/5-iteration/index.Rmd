@@ -749,7 +749,7 @@ countdown(
 
 ---
 
-# [HW 5](https://p4a.seas.gwu.edu/2024-Spring/hw/5-iteration.html)
+# [HW 5](https://p4a.seas.gwu.edu/2025-Spring/hw/5-iteration.html)
 
 - ## Trickier turtles
 
