@@ -26,6 +26,20 @@ output:
 
 ---
 
+class: center, inverse, middle
+
+# Two rules:
+
+--
+
+## 1) Be Present
+
+--
+
+## 2) Celebrate Mistakes
+
+---
+
 ```{r child="topics/0.Rmd"}
 ```
 
@@ -66,16 +80,16 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 .leftcol30[.circle[
 
-<img src="images/lujin.jpg" width="300">
+<img src="images/pingfan_hu.jpg" width="300">
 
 ]]
 
 .rightcol70[
 
-### **Lujin Zhao**
+### **Pingfan Hu**
 
 - Graduate Teaching Assistant (GTA)
-- 4th Year PhD student in EMSE
+- 2nd Year PhD student in EMSE
 
 ]
 
@@ -85,16 +99,16 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 .leftcol30[.circle[
 
-<img src="images/bogdan.jpg" width="300">
+<img src="images/lola_nurullaeva.jpg" width="300">
 
 ]]
 
 .rightcol70[
 
-### **Bogdan Bunea**
+### **Lola Nurullaeva**
 
 - Learning Assistant (LA)
-- EMSE Sophomore & P4A / EDA alumni
+- EMSE Senior & P4A / EDA alumni
 
 ]
 
@@ -106,7 +120,7 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 ## `r fa('globe')` Everything you need will be on the course website:
 
-### https://p4a.seas.gwu.edu/2024-Spring/
+### https://p4a.seas.gwu.edu/2025-Spring/
 
 ---
 
@@ -121,7 +135,7 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 ### In the fall, you'll take EMSE 4572 / 6572: Exploratory Data Analysis
 
-### [Fall 2023 Project Showcase](https://eda.seas.gwu.edu/showcase/2023-fall.html)
+### [Fall 2024 Project Showcase](https://eda.seas.gwu.edu/showcase.html#fall-2024)
 
 ---
 
@@ -145,7 +159,7 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 ---
 
-# Homeworks (48% of grade)
+# Homeworks (45% of grade)
 
 <br>
 
@@ -155,7 +169,7 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 --
 
-## `r fa('clock')` Due 11:59pm Wed. before class
+## `r fa('clock')` Due 11:59pm Tues. before class
 
 ---
 
@@ -169,17 +183,17 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 ---
 
-# Quizzes (15% of grade)
+# Quizzes (18% of grade)
 
 <br>
 
 --
 
-## `r fa('calendar')` In class every other week-ish (7 total, drop lowest 2)
+## `r fa('calendar')` In class (almost) every other week (10 total, drop lowest 2)
 
 --
 
-## `r fa('clock')` ~10-15 minutes (1-3 questions)
+## `r fa('clock')` ~10 minutes (1-3 questions)
 
 --
 
@@ -191,9 +205,9 @@ Assistant Professor, Engineering Management & Systems Engineering
 
 <br>
 
-## `r fa('calendar')` Midterm (weeks 1 - 7) on March 07
+## `r fa('calendar')` Midterm (weeks 1 - 7) on March 06
 
-## `r fa('calendar')` Final (weeks 1 - 14) on May 09
+## `r fa('calendar')` Final (weeks 1 - 14) on May 08
 
 ---
 
@@ -204,8 +218,8 @@ Assistant Professor, Engineering Management & Systems Engineering
 Component                  | Weight | Notes
 ---------------------------|--------|----------------
 Participation / Attendance | 7%     |
-Homeworks & Readings (13x) | 48%    | Lowest 1 dropped
-Quizzes (7x)               | 15%    | Lowest 2 dropped
+Homeworks & Readings (13x) | 45%    | Lowest 1 dropped
+Quizzes (7x)               | 18%    | Lowest 2 dropped
 Midterm Exam               | 10%    |
 Final Exam                 | 20%    |
 
@@ -227,12 +241,24 @@ Final Exam         | 40%
 
 ---
 
+# Typing Bonus Challenge
+
+- Earn a **1% bonus to your final grade** by beating Professor Helveston in a speed typing challenge
+- Challenge held on https://monkeytype.com/
+
+<br>
+
+(Yes, I'm serious...see rules [here](https://p4a.seas.gwu.edu/2025-Spring/syllabus.html#typing-bonus-challenge))
+
+---
+
 # Course policies
 
 --
 
 .leftcol35[
 
+- ## BE ON TIME
 - ## BE NICE
 - ## BE HONEST
 - ## DON'T CHEAT
@@ -251,7 +277,7 @@ Final Exam         | 40%
 
 class: center
 
-# [AI Policy](https://p4a.seas.gwu.edu/2024-Spring/syllabus.html#use-of-chatgpt-and-other-ai-tools)
+# [AI Policy](https://p4a.seas.gwu.edu/2025-Spring/syllabus.html#use-of-chatgpt-and-other-ai-tools)
 
 ### ([Demo](https://chat.openai.com/))
 
@@ -295,7 +321,7 @@ class: center
 
 --
 
-## `r fa('slack')` Use [Slack](https://emse-p4a-s24.slack.com/) to ask questions.
+## `r fa('slack')` Use [Slack](https://emse-p4a-s25.slack.com/) to ask questions.
 
 --
 
@@ -311,13 +337,13 @@ class: center
 
 ---
 
-# `r fa('hard-drive')` [Course Software](https://p4a.seas.gwu.edu/2024-Spring/software.html)
+# `r fa('hard-drive')` [Course Software](https://p4a.seas.gwu.edu/2025-Spring/software.html)
 
 <br>
 
 --
 
-## `r fa('slack')` [Slack](https://emse-p4a-s24.slack.com/): Install app & **turn notifications on**!
+## `r fa('slack')` [Slack](https://emse-p4a-s25.slack.com/): Install app & **turn notifications on**!
 
 --
 
@@ -333,7 +359,7 @@ class: inverse, center
 
 # .fancy[Intermission]
 
-## `r fa('hard-drive')` Install [course software](https://p4a.seas.gwu.edu/2024-Spring/software.html) if you haven't
+## `r fa('hard-drive')` Install [course software](https://p4a.seas.gwu.edu/2025-Spring/software.html) if you haven't
 
 ```{r, echo=FALSE}
 countdown(
@@ -388,7 +414,7 @@ Ross & Robert create "R" (1991, U. of Auckland)
 ## .center[[Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician)]
 
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Rober_Gentleman.png" width=250>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Robert_Gentleman_on_R_Consortium.jpg" width=250>
 </center>
 
 ]
@@ -396,12 +422,14 @@ Ross & Robert create "R" (1991, U. of Auckland)
 ---
 
 # Wait, why aren't we using Python?
-
+ 
 .leftcol[
 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language) is a general purpose language developed by [**Guido van Rossum**](https://en.wikipedia.org/wiki/Guido_van_Rossum), a computer scientist.
 - Unlike R, Python was not originally developed for data analysis.
-- Both languages are extremely useful, and you should learn python too. 
+- Both languages are extremely useful, and **you should probably learn python too**. 
+
+### The vast majority of concepts we'll learn apply to python
 
 ]
 
@@ -482,7 +510,7 @@ class: center
 - Know the boxes
 - Customize the layout
 - Customize the look
-- [Extra themes](https://github.com/gadenbuie/rsthemes)
+- [Extra themes](https://www.garrickadenbuie.com/project/rsthemes/)
 
 ]
 
@@ -585,7 +613,7 @@ x
 
 ]
 
-(see [here](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts) for more shortcuts)
+(see [here](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-RStudio-IDE) for more shortcuts)
 
 ]
 
@@ -839,11 +867,11 @@ countdown(
 
 1) Create objects to store the values in this table:
 
-| City              | Area (sq mi) | Population (thousands) |
-|-------------------|----------------|------------------------|
-| San Francisco, CA | 47             | 884                    |
-| Chicago, IL       | 228            | 2,716                  |
-| Washington, DC    | 61             | 694                    |
+| City                 | Area<br>(sq mi) | Population<br>(thousands) |
+|----------------------|----------------|------------------------|
+| San Francisco, CA    | 47             | 884                    |
+| Chicago, IL          | 228            | 2,716                  |
+| Washington, DC       | 61             | 694                    |
 
 2) Using the objects you created, answer the following questions:
 
@@ -1558,6 +1586,6 @@ countdown(
 
 class: center, middle
 
-# Go to the [schedule](https://p4a.seas.gwu.edu/2024-Spring/schedule.html)
+# Go to the [schedule](https://p4a.seas.gwu.edu/2025-Spring/schedule.html)
 
 # ...and read carefully!
