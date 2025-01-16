@@ -283,6 +283,19 @@ Beyond those, assignments are due by 11:59pm on the assigned due date unless spe
 
 If you need a special accommodation such as due to an illness, family emergency, or religious holidays, contact the instructor ahead of time.
 
+## Use of chatGPT and other AI tools
+
+Large language models (LLMs) are capable of producing exact solutions to nearly all of the coding problems assigned in this class. That means we all basically have a solutions manual available for free.
+
+With this in mind, the use of AI is permitted as follows:
+
+- **Assignments 1-7**: AI tools are **not permitted** unless explicitly instructed. Copying code from an AI tool and submitting it as your own for these assignments will be considered cheating. In this section of the course, we are building foundational skills in computational thinking and problem solving. If you don't master these skills, you won't be able to interpret what chatGPT is giving you, and you won't be able to test if it is wrong. Master these skills first so that you know _how_ to use AI tools effectively in your coding.
+- **Assignments 8-13**: AI tools are permitted, with caveats. If you do use an AI tool on these assignments, you must include a link to the chat conversation you had to receive full credit.
+
+Learn to use tools like ChatGPT as a learning assistant - a tool to help you accomplish the task - rather than just a solutions manual. One version of using it makes you a better and more efficient coder, the other robs you of that.
+
+In the follow-on course to this one ([EMSE 4572: Exploratory Data Analysis](https://eda.seas.gwu.edu/)), the use of AI will be allowed to support your projects.
+
 ## Collaboration Policy
 
 <!-- This policy is mostly copied from the course 15-112 at Carnegie Mellon University -->
@@ -327,19 +340,6 @@ Cheating on quizzes, assignments, or the final project can include:
 - Copying part of an answer off of another student's paper, even if it is very small.
 - Using solutions provided by students who previously took the course.
 
-### Use of chatGPT and other AI tools
-
-Large language models (LLMs) are capable of producing exact solutions to many of the coding problems assigned in this class. That means we all basically have a solutions manual available for free.
-
-With this in mind, the use of AI is permitted as follows:
-
-- **Assignments 1-7**: AI tools are **not permitted** unless explicitly instructed. Copying code from an AI tool and submitting it as your own for these assignments will be considered cheating. In this section of the course, we are building foundational skills in computational thinking and problem solving. If you don't master these skills, you won't be able to interpret what chatGPT is giving you, and you won't be able to test if it is wrong. Master these skills first - it is worth the effort.
-- **Assignments 8-13**: AI tools are permitted, with caveats. If you do use an AI tool on these assignments, you must include a link to the chat conversation you had to receive full credit.
-
-Learn to use tools like ChatGPT as a learning assistant - a tool to help you accomplish the task - rather than just a solutions manual. One version of using it makes you a better and more efficient coder, the other robs you of that.
-
-In the follow-on course to this one ([EMSE 4572: Exploratory Data Analysis](https://eda.seas.gwu.edu/)), the use of AI will be allowed to support your projects.
-
 ### Penalties
 
 Violations will be reported to the [Office of Student Rights & Responsibilities](https://studentconduct.gwu.edu/charging-academic-integrity-violations). Penalties are decided by the course instructors, and can vary based on the severity of the offense. Possible penalties include:
@@ -369,12 +369,11 @@ Sometimes, students panic and copy code right before the deadline, then regret w
 
 I applaud all of you who attend school with children! It is difficult to balance academic, work, and family commitments, and I want you to succeed. Here are my policies regarding children in class:
 
-1. All breastfeeding babies are welcome in class as often as necessary.
-2. Non-nursing babies and older children are welcome whenever alternate arrangements cannot be made. As a parent of young children, I understand that babysitters fall through, partners have conflicting schedules, children get sick, and other issues arise that leave parents with few other options.
-3. In cases where children come to class, I invite parents/caregivers to sit close to the door so as to more easily excuse yourself to attend to your child's needs. Non-parents in the class: please reserve seats near the door for your parenting classmates.
-4. All students are expected to join with me in creating a welcoming environment that is respectful of your classmates who bring children to class.
+1. Feel free to bring your children to class as often as necessary. That includes breastfeeding babies, non-nursing babies, and older children. All children are welcome whenever alternate arrangements cannot be made. As a parent of young children myself, I understand that babysitters fall through, partners have conflicting schedules, children get sick, and other issues arise that leave parents with few other options.
+2. In cases where children come to class, I invite parents/caregivers to sit close to the door so as to more easily excuse yourself to attend to your child's needs. I also expect that parents will promptly tend to their needs if disruptions occur...no need to ask permission to step out, just take whatever time is needed. Non-parents in the class: please reserve seats near the door for your parenting classmates.
+3. All students are expected to join with me in creating a welcoming environment that is respectful of your classmates who bring children to class.
 
-I understand that sleep deprivation and exhaustion are among the most difficult aspects of parenting young children. The struggle of balancing school, work, childcare, and graduate school is tiring, and I will do my best to accommodate any such issues while maintaining the same high expectations for all students enrolled in the class. Please do not hesitate to contact me with any questions or concerns.
+I understand that sleep deprivation and exhaustion are among the most difficult aspects of parenting young children. The struggle of balancing school, work, childcare, and school is tiring, and I will do my best to accommodate any such issues while maintaining the same high expectations for all students enrolled in the class. Please do not hesitate to contact me with any questions or concerns.
 
 ## Lauren's Promise
 
