@@ -29,8 +29,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          # Install dependencies including ICU libraries
-          sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libicu-dev libicu72
+          sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libicu-dev
 
       - name: Query R package dependencies
         run: |
