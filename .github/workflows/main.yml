@@ -29,11 +29,8 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          # Add repository for newer ICU libraries
-          sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-          sudo apt-get update
-          # Install dependencies including specific ICU version
-          sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libicu70 libicu-dev
+          # Install dependencies including ICU libraries
+          sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libicu-dev libicu72
 
       - name: Query R package dependencies
         run: |
