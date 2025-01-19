@@ -31,6 +31,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libicu-dev
 
+      - name: Install stringi first
+        run: |
+          install.packages("stringi", configure.args="--disable-pkg-config", repos="https://cloud.r-project.org")
+        shell: Rscript {0}
+
       - name: Query R package dependencies
         run: |
           install.packages(c('remotes', 'here'))
