@@ -67,12 +67,6 @@ countdown(
 
 ---
 
-class: inverse, center, middle
-
-# Where is all this going?
-
----
-
 ```{r child="topics/0.Rmd"}
 ```
 
