@@ -11,7 +11,8 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    # Change to Ubuntu 22.04 which has ICU 70
+    runs-on: ubuntu-22.04
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -30,11 +31,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libicu-dev
-
-      - name: Install stringi first
-        run: |
-          install.packages("stringi", configure.args="--disable-pkg-config", repos="https://cloud.r-project.org")
-        shell: Rscript {0}
 
       - name: Query R package dependencies
         run: |
