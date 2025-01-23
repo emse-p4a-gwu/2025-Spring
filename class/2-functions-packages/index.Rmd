@@ -980,3 +980,7 @@ Kevin is deciding between purchasing a Toyota Prius, which sells for $27,600, an
 .orange[How long (in years) would Kevin have to drive the Prius for the money he saves in fuel savings to be greater than the price premium compared to the Camry?]
 
 ]
+
+---
+
+# Preview of [HW2](https://p4a.seas.gwu.edu/2025-Spring/hw/2-functions-packages.html)
