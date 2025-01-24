@@ -502,9 +502,8 @@ class: inverse
 
 ```{r, echo=FALSE}
 countdown(
-  minutes      = 10,
+  minutes      = 8,
   warn_when    = 30,
-  update_every = 15,
   top          = 0,
   right        = 0,
   font_size    = '2em'
@@ -668,12 +667,11 @@ class: inverse
 
 ```{r, echo=FALSE}
 countdown(
-  minutes      = 12,
-  warn_when    = 30,
-  update_every = 15,
-  top          = 0,
-  right        = 0,
-  font_size    = '2em'
+  minutes   = 10,
+  warn_when = 30,
+  top       = 0,
+  right     = 0,
+  font_size = '2em'
 )
 ```
 
@@ -860,7 +858,6 @@ class: inverse
 countdown(
   minutes      = 15,
   warn_when    = 30,
-  update_every = 15,
   top          = 0,
   right        = 0,
   font_size    = '2em'
@@ -933,7 +930,6 @@ class: inverse
 countdown(
   minutes      = 15,
   warn_when    = 30,
-  update_every = 15,
   top          = 0,
   right        = 0,
   font_size    = '2em'
@@ -964,3 +960,8 @@ countdown(
 - militaryTimeToStandardTime(23) == 11
 
 ]
+
+---
+
+# Preview [HW 3](https://p4a.seas.gwu.edu/2025-Spring/hw/3-creating-functions.html)
+
