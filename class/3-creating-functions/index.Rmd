@@ -242,7 +242,7 @@ test
 ```
 
 ```
-Error: object 'test' not found
+NULL
 ```
 
 ]]
