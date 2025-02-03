@@ -319,8 +319,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="vectorfactorialn-solo-10">2) <code>vectorFactorial(n)</code> [SOLO, 10%]</h3>
 <p>Write the function <code>vectorFactorial(n)</code> which computes the factorial of <code>n</code> using vectors to avoid using a loop. Hint: there are some useful functions listed in the <a href="https://p4a.jhelvy.com/vectors.html#numeric-vectors">vectors chapter</a> for performing operators on a numeric vector.</p>
 </section>
-<section id="nthhighestvaluen-x-solo-10" class="level3">
-<h3 class="anchored" data-anchor-id="nthhighestvaluen-x-solo-10">3) <code>nthHighestValue(n, x)</code> [SOLO, 10%]</h3>
+<section id="nthhighestvaluen-x-solo-15" class="level3">
+<h3 class="anchored" data-anchor-id="nthhighestvaluen-x-solo-15">3) <code>nthHighestValue(n, x)</code> [SOLO, 15%]</h3>
 <p>Write a function to find the nth highest value in a given vector. For example, if <code>x</code> equals <code>c(5, 1, 3)</code>, then <code>nthHighestValue(1, x)</code> should return <code>5</code>, because <code>5</code> is the 1st highest value in <code>x</code>, and <code>nthHighestValue(2, x)</code> should return <code>3</code> because it’s the 2nd highest value in <code>x</code>. Assume only numeric inputs, and assume that <code>n &lt;= length(x)</code>. <strong>You may not use loops</strong>.</p>
 </section>
 <section id="dotproducta-b-collaborative-15" class="level3">
@@ -331,13 +331,18 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="middlevaluea-collaborative-15">5) <code>middleValue(a)</code> [COLLABORATIVE, 15%]</h3>
 <p>Write the function <code>middleValue(a)</code> that takes a vector of numbers <code>a</code> and returns the value of the middle element (or the average of the two middle elements).</p>
 </section>
-<section id="isrotationa1-a2-collaborative-15" class="level3">
-<h3 class="anchored" data-anchor-id="isrotationa1-a2-collaborative-15">6) <code>isRotation(a1, a2)</code> [COLLABORATIVE, 15%]</h3>
-<p>Write the function <code>isRotation(a1, a2)</code> that takes two vectors, <code>a1</code> and <code>a2</code>, and returns <code>TRUE</code> if <code>a2</code> is a rotation of <code>a1</code> and <code>FALSE</code> otherwise. For example, <code>c(2,3,4,5)</code> is a rotation of <code>c(4,5,2,3)</code>. Obviously, two vectors of different lengths cannot be rotations. Also, any vector is a rotation of itself, so <code>isRotation(c(2,3,4,5), c(2,3,4,5))</code> should return <code>TRUE</code>.</p>
-</section>
-<section id="fibonaccisequencen-collaborative-20" class="level3">
-<h3 class="anchored" data-anchor-id="fibonaccisequencen-collaborative-20">7) <code>fibonacciSequence(n)</code> [COLLABORATIVE, 20%]</h3>
+<section id="fibonaccisequencen-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="fibonaccisequencen-collaborative-15">6) <code>fibonacciSequence(n)</code> [COLLABORATIVE, 15%]</h3>
 <p>Write the function <code>fibonacciSequence(n)</code> that returns a vector containing the first <code>n</code> numbers in the <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci Sequence</a>. Assume that <code>n</code> is a whole number greater or equal to 1, and also that the first number in the sequence is <code>1</code>, so <code>fibonacciSequence(1) == 1</code> should be <code>TRUE</code>. For all numbers where <code>n &gt; 1</code>, the function should return a vector, e.g.&nbsp;<code>identical(idenfibonacciSequence(2), c(1, 1))</code> should be <code>TRUE</code>.</p>
+</section>
+<section id="removerepeatsx-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="removerepeatsx-collaborative-15">7) <code>removeRepeats(x)</code> [COLLABORATIVE, 15%]</h3>
+<p>Write the function <code>removeRepeats(x)</code> that takes a vector, <code>x</code>, and removes any repeated elements. The function should work just like the <code>unique()</code> function, except you can’t use <code>unique()</code> in your solution. For example, the following should return <code>TRUE</code>:</p>
+<ul>
+<li><code>identical(removeRepeats(c(1, 3, 5, 3, 3, 2, 1, 7, 5)), c(1, 3, 5, 2, 7))</code></li>
+<li><code>identical(removeRepeats(c('foo', 'foo', 'bar', 'test')), c('foo', 'bar', 'test'))</code></li>
+</ul>
+<p><strong>Note</strong>: Be careful to use <code>identical()</code> to compare if two vectors are the same in your test function.</p>
 </section>
 <section id="read-and-reflect-solo-10" class="level3">
 <h3 class="anchored" data-anchor-id="read-and-reflect-solo-10">8) Read and reflect [SOLO, 10%]</h3>
