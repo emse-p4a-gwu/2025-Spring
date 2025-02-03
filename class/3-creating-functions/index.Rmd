@@ -517,7 +517,7 @@ countdown(
 ```{r}
 f1 <- function(x) {
     cat(x^3)
-    cat(y, x)
+    cat(y, x, sep="")
 }
 
 f2 <- function(x, y = 7) {
