@@ -1099,19 +1099,32 @@ countdown(
 )
 ```
 
-# Your turn
+# Your turn: `isEvenish(x)`
 
-### `isEvenish(x)`
+.leftcol[
 
-Given an arbitrary value `x`, return `TRUE` if it is an even number and `FALSE` otherwise. The function should also work for numbers provided as characters, so `isEvenish("2")` should return `TRUE`. Some test cases:
+Given an arbitrary value `x`, return `TRUE` if it is an even number or an even number as a character and `FALSE` otherwise. So both `isEvenish(2)` and `isEvenish("2")` should return `TRUE`. Some test cases:
 
-`isEvenPositiveInt(2) == TRUE`<br>
-`isEvenPositiveInt("2") == TRUE`<br>
-`isEvenPositiveInt("yikes!") == FALSE`<br>
-`isEvenPositiveInt(3.14) == FALSE`<br>
-`isEvenPositiveInt(TRUE) == FALSE`
+`isEvenish(2) == TRUE`<br>
+`isEvenish("2") == TRUE`<br>
+`isEvenish("yikes!") == FALSE`<br>
+`isEvenish(3) == FALSE`<br>
+`isEvenish(TRUE) == FALSE`
+`isEvenish(FALSE) == FALSE`
 
-Hint: it may be helpful to write an additional function called `isEvenNumber(x)` that handles the cases when you know `x` is a numeric value.
+]
+
+.rightcol[
+
+**Hint**: it may be helpful to use the function `isEven(x)` for when you know `x` is a numeric value: 
+
+```{r}
+isEven <- function(x) { 
+  return(x %% 2 == 0) 
+}
+```
+
+]
 
 ---
 
