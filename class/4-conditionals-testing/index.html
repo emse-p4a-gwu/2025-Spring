@@ -70,7 +70,7 @@ class: inverse
 
 # Quiz 3
 
-<div class="countdown" id="timer_1c8e8f69" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:3em;">
+<div class="countdown" id="timer_68dd856d" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:3em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -222,7 +222,7 @@ f(0)
 
 class: inverse
 
-<div class="countdown" id="timer_7a3f4dc4" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_befddf44" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -393,7 +393,7 @@ getLetterGrade(22)
 
 class: inverse
 
-<div class="countdown" id="timer_7c0f1344" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_6d1975e1" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -909,7 +909,7 @@ isEven(TRUE)
 
 class: inverse
 
-<div class="countdown" id="timer_e1a30441" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_857d4144" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -936,7 +936,7 @@ background-image: url(images/rubber-duck.png)
 
 # .fancy[Intermission]
 
-<div class="countdown" id="timer_82008ef0" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="bottom:0;left:0;font-size:2em;">
+<div class="countdown" id="timer_e8d8cdb6" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="bottom:0;left:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1305,7 +1305,7 @@ is.null(x)
 
 class: inverse
 
-<div class="countdown" id="timer_29416dc4" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_ece05b91" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1327,24 +1327,38 @@ You should also write a test function called `test_getInRange()`.
 
 class: inverse
 
-<div class="countdown" id="timer_c416f296" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_114d2f3e" data-warn-when="30" data-update-every="15" data-blink-colon="true" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
-# Your turn
+# Your turn: `isEvenish(x)`
 
-### `isEvenish(x)`
+.leftcol[
 
-Given an arbitrary value `x`, return `TRUE` if it is an even number and `FALSE` otherwise. The function should also work for numbers provided as characters, so `isEvenish("2")` should return `TRUE`. Some test cases:
+Given an arbitrary value `x`, return `TRUE` if it is an even number or an even number as a character and `FALSE` otherwise. So both `isEvenish(2)` and `isEvenish("2")` should return `TRUE`. Some test cases:
 
-`isEvenPositiveInt(2) == TRUE`&lt;br&gt;
-`isEvenPositiveInt("2") == TRUE`&lt;br&gt;
-`isEvenPositiveInt("yikes!") == FALSE`&lt;br&gt;
-`isEvenPositiveInt(3.14) == FALSE`&lt;br&gt;
-`isEvenPositiveInt(TRUE) == FALSE`
+`isEvenish(2) == TRUE`&lt;br&gt;
+`isEvenish("2") == TRUE`&lt;br&gt;
+`isEvenish("yikes!") == FALSE`&lt;br&gt;
+`isEvenish(3) == FALSE`&lt;br&gt;
+`isEvenish(TRUE) == FALSE`
+`isEvenish(FALSE) == FALSE`
 
-Hint: it may be helpful to write an additional function called `isEvenNumber(x)` that handles the cases when you know `x` is a numeric value.
+]
+
+.rightcol[
+
+**Hint**: it may be helpful to use the function `isEven(x)` for when you know `x` is a numeric value: 
+
+
+``` r
+isEven &lt;- function(x) { 
+  return(x %% 2 == 0) 
+}
+```
+
+]
 
 ---
 
