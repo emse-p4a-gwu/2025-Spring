@@ -231,57 +231,79 @@ mystery_function <- function(n) {
 # ------------------------------------------------
 # Practice 3: while loops
 
-# The function `isMultipleOf4Or7(n)` returns `TRUE` if `n` is a 
-# multiple of 4 or 7 and `FALSE` otherwise.
+# isPositiveEven(n): Write a function that returns TRUE 
+# if n is a positive even number and FALSE otherwise.
 
-test_isMultipleOf4Or7 <- function() {
-    cat("Testing isMultipleOf4Or7()...")
-    stopifnot(isMultipleOf4Or7(0) == FALSE)
-    stopifnot(isMultipleOf4Or7(1) == FALSE)
-    stopifnot(isMultipleOf4Or7(4) == TRUE)
-    stopifnot(isMultipleOf4Or7(7) == TRUE)
-    stopifnot(isMultipleOf4Or7(28) == TRUE)
+test_isPositiveEven <- function() {
+    cat("Testing isPositiveEven()...")
+    stopifnot(isPositiveEven(1) == FALSE)
+    stopifnot(isPositiveEven(4) == TRUE)
+    stopifnot(isPositiveEven(7) == FALSE)
+    stopifnot(isPositiveEven(28) == TRUE)
+    stopifnot(isPositiveEven(-1) == FALSE)
+    stopifnot(isPositiveEven(-2) == FALSE)
     cat("Passed!")
 }
 
-isMultipleOf4Or7 <- function(n) {
-    if (n == 0) { return(FALSE) }
-    return((n %% 4 == 0) | (n %% 7 == 0))
+isPositiveEven <- function(n) {
+    if (n <= 0) { return(FALSE) }
+    return((n %% 2) == 0)
 }
 
-test_isMultipleOf4Or7()
+test_isPositiveEven()
 
 
-# nthMultipleOf4Or7(n): Write a function that returns the
-# nth positive integer that is a multiple of either 4 or 7.
+# nthPositiveEven(n): Write a function that returns the 
+# nth positive even integer in the sequence of all 
+# positive even numbers
 
-test_nthMultipleOf4Or7 <- function() {
-    cat("Testing nthMultipleOf4Or7()...")
-    stopifnot(nthMultipleOf4Or7(1) == 4)
-    stopifnot(nthMultipleOf4Or7(2) == 7)
-    stopifnot(nthMultipleOf4Or7(3) == 8)
-    stopifnot(nthMultipleOf4Or7(4) == 12)
-    stopifnot(nthMultipleOf4Or7(5) == 14)
-    stopifnot(nthMultipleOf4Or7(6) == 16)
+test_nthPositiveEven <- function() {
+    cat("Testing nthPositiveEven()...")
+    stopifnot(nthPositiveEven(1) == 2)
+    stopifnot(nthPositiveEven(2) == 4)
+    stopifnot(nthPositiveEven(3) == 6)
+    stopifnot(nthPositiveEven(4) == 8)
+    stopifnot(nthPositiveEven(5) == 10)
+    stopifnot(nthPositiveEven(6) == 12)
     cat("Passed!")
 }
 
-# Number: 0  1  2  3  (4)  5  6  (7)  (8)  9  10
-# Count:  0  0  0  0   1   1  1   2    3   3  3
+# Solution 1 by keeping track of the count:
 
-nthMultipleOf4Or7 <- function(n) {
+# Number: 1  (2)  3  (4)  5  (6)  7  (8)  9  (10)
+# Count:  0   1   1   2   2   3   3   4   4   5
+
+nthPositiveEven <- function(n) {
     count <- 1
     number <- 0
     while (count <= n) {
         number <- number + 1
-        if (isMultipleOf4Or7(number)) {
+        if (isPositiveEven(number)) {
             count <- count + 1
         }
     }
     return(number)
 }
 
-test_nthMultipleOf4Or7()
+
+# Solution 2 by using while(TRUE)
+
+nthPositiveEven <- function(n) {
+    count <- 0
+    number <- 0
+    while (TRUE) {
+        number <- number + 1
+        if (isPositiveEven(number)) {
+            count <- count + 1
+        }
+        if (count == n) {
+            break
+        }
+    }
+    return(number)
+}
+
+test_nthPositiveEven()
 
 
 # ------------------------------------------------
