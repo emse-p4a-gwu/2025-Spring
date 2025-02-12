@@ -26,17 +26,49 @@ output:
 
 ---
 
+
+class: inverse
+
+# Quiz 4
+
+```{r, echo=FALSE}
+countdown(
+  minutes      = 10,
+  warn_when    = 30,
+  update_every = 1,
+  top          = 0,
+  right        = 0,
+  font_size    = '3em'
+)
+```
+
+.leftcol[
+
+## Write your name on the quiz!
+
+## Rules:
+
+- Work alone; no outside help of any kind is allowed.
+- No calculators, no notes, no books, no computers, no phones.
+
+]
+
+.rightcol[
+
+<br>
+<center>
+<img src="" width="400">
+</center>
+
+]
+
+---
+
 # Common problems in homeworks
 
 --
 
-### .red[Use `almostEqual()` in test cases with numbers]
-
-```{r}
-almostEqual <- function(n1, n2, threshold = 0.00001) {
-    return(abs(n1 - n2) <= threshold)
-}
-```
+### .red[Use `all.equal()` in test cases with numbers]
 
 --
 
@@ -51,7 +83,7 @@ stopifnot(getTheCents(2.45) == 45)
 Instead, use:
 
 ```{r, eval=FALSE}
-stopifnot(almostEqual(getTheCents(2.45), 45))
+stopifnot(all.equal(getTheCents(2.45), 45))
 ```
 
 ---
@@ -67,25 +99,6 @@ stopifnot(almostEqual(getTheCents(2.45), 45))
 
 ---
 
-# Please don't copy-paste from ChatGPT
-
-## (It's soooo obvious)
-
-```{r, eval=FALSE}
-kthDigit <- function(x, k) {
-  x_str <- as.character(x)
-  if (k <= nchar(x_str)) {
-    return(as.numeric(substr(x_str, nchar(x_str) - k + 1, nchar(x_str) - k + 1)))
-  } else {
-    return(0)
-  }
-}
-```
-
-## And you lose the chance to think 😞
-
----
-
 # Read homework feedback on Box
 
 <br>
@@ -93,6 +106,12 @@ kthDigit <- function(x, k) {
 ### Go to [box.com](https://box.com/)
 
 ### Search for folder named `netID-p4a` (e.g., `jph-p4a`)
+
+---
+
+class: middle, center
+
+# The tricky `isNumericLooking(n)` problem
 
 ---
 
