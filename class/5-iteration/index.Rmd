@@ -681,28 +681,29 @@ countdown(
 
 .leftcol[
 
-In your practice file, you have the solution for the function `isMultipleOf4Or7(n)`, which returns `TRUE` if `n` is a multiple of 4 or 7 and `FALSE` otherwise.
+In your practice file, you have the solution for the function `isPositiveEven(n)`, which returns `TRUE` if `n` is a positive even number and `FALSE` otherwise.
 
-- `isMultipleOf4Or7(0) == FALSE`
-- `isMultipleOf4Or7(1) == FALSE`
-- `isMultipleOf4Or7(4) == TRUE`
-- `isMultipleOf4Or7(7) == TRUE`
-- `isMultipleOf4Or7(28) == TRUE`
+- `isPositiveEven(1) == FALSE`
+- `isPositiveEven(4) == TRUE`
+- `isPositiveEven(7) == FALSE`
+- `isPositiveEven(28) == TRUE`
+- `isPositiveEven(-1) == FALSE`
+- `isPositiveEven(-2) == FALSE`
 
 ]
 
 .rightcol[
 
-Your job is to write `nthMultipleOf4Or7(n)`:
+Your job is to write `nthPositiveEven(n)`:
 
-A function that returns the nth positive integer that is a multiple of either 4 or 7.
+A function that returns the nth positive even integer in the sequence of all positive even numbers
 
-- `nthMultipleOf4Or7(1) == 4`
-- `nthMultipleOf4Or7(2) == 7`
-- `nthMultipleOf4Or7(3) == 8`
-- `nthMultipleOf4Or7(4) == 12`
-- `nthMultipleOf4Or7(5) == 14`
-- `nthMultipleOf4Or7(6) == 16`
+- `nthPositiveEven(1) == 2`
+- `nthPositiveEven(2) == 4`
+- `nthPositiveEven(3) == 6`
+- `nthPositiveEven(4) == 8`
+- `nthPositiveEven(5) == 10`
+- `nthPositiveEven(6) == 12`
 
 ]
 
