@@ -61,11 +61,30 @@ sumFromMToN <- function(m, n) {
 sumToN <- function(n) {
     return(n*(n+1)/2)
 }
-sumFromMToN <- function(m, n) {
+sumFromMToNFormula <- function(m, n) {
     return(sumToN(n) - sumToN(m-1))
 }
 
 test_sumFromMToN()
+
+
+# Which is faster?
+
+# install.packages('rbenchmark')
+
+rbenchmark::benchmark(
+    "sumFromMToN" = {
+        suppressMessages(sumFromMToN(10, 20))
+    },
+    "sumFromMToNFormula" = {
+        suppressMessages(sumFromMToNFormula(10, 20))
+    },
+    replications = 100000,
+    columns = c("test", "replications", "elapsed",
+                "relative", "user.self", "sys.self")    
+)
+
+
 
 
 # 2) sumEveryKthFromMToN(m, n, k): Write a function to sum every kth integer 
