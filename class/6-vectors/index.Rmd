@@ -26,6 +26,43 @@ output:
 
 ---
 
+class: inverse
+
+# Quiz 5
+
+```{r, echo=FALSE}
+countdown(
+  minutes      = 10,
+  warn_when    = 30,
+  update_every = 1,
+  top          = 0,
+  right        = 0,
+  font_size    = '3em'
+)
+```
+
+.leftcol[
+
+## Write your name on the quiz!
+
+## Rules:
+
+- Work alone; no outside help of any kind is allowed.
+- No calculators, no notes, no books, no computers, no phones.
+
+]
+
+.rightcol[
+
+<br>
+<center>
+<img src="" width="400">
+</center>
+
+]
+
+---
+
 ```{r child="topics/0.Rmd"}
 ```
 
@@ -771,7 +808,7 @@ class: inverse
 
 ```{r, echo=FALSE}
 countdown(
-  minutes      = 10,
+  minutes      = 6,
   warn_when    = 30,
   update_every = 1,
   top          = 0,
@@ -781,6 +818,8 @@ countdown(
 ```
 
 ## Your turn
+
+.leftcol[
 
 Re-write `isPrime(n)` from last week, but **without loops!**.
 
@@ -792,15 +831,11 @@ Remember, `isPrime(n)` takes a non-negative integer, `n`, and returns `TRUE` if 
 - `isPrime(13) == TRUE`
 - `isPrime(14) == FALSE`
 
-(If you're stuck, go to the next slide for a hint)
+]
 
----
+.rightcol[
 
-class: inverse
-
-## Hint
-
-Loop solution:
+## Hint:
 
 .code80[
 
@@ -821,7 +856,7 @@ isPrime <- function(n) {
 }
 ```
 
-]
+]]
 
 ---
 
@@ -1225,7 +1260,5 @@ x$numbers
 
 # [HW 6](https://p4a.seas.gwu.edu/2025-Spring/hw/6-vectors.html)
 
---
-
-- Midterm is during class period on 3/7 and will **not** include strings.
+- Midterm is during class period on 3/6 and will **not** include strings (next week's content).
 - Includes everything up to and including vectors.
