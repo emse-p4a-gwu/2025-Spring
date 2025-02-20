@@ -63,6 +63,15 @@ countdown(
 
 ---
 
+# Midterm
+
+- Midterm is during class period on 3/6 and will **not** include strings (next week's content).
+- Includes everything up to and including vectors.
+- Paper and pen / pencil only (just like quizzes).
+- You can bring a single 8.5x11 sheet of notes with anything on it (front & back).
+
+---
+
 ```{r child="topics/0.Rmd"}
 ```
 
@@ -1259,6 +1268,3 @@ x$numbers
 ---
 
 # [HW 6](https://p4a.seas.gwu.edu/2025-Spring/hw/6-vectors.html)
-
-- Midterm is during class period on 3/6 and will **not** include strings (next week's content).
-- Includes everything up to and including vectors.
