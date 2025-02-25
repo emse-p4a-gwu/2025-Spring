@@ -172,10 +172,55 @@ fruit[str_count(fruit, "o") > 1]
 
 
 
+# ------------------------------------------------
+# Your turn 2:
+
+
+# Write a function that takes a string 'text' and a character 
+# vector 'words', and replaces all occurrences of any word in 'words'
+# with asterisks (one `*` per letter). The function should be 
+# case-insensitive.
+
+test_censorText <- function() {
+    cat("Testing censorText()...")
+    stopifnot(censorText("This is a bad example", c("bad")) == "This is a *** example")
+    stopifnot(censorText("hello world", c("hello", "world")) == "***** *****")
+    stopifnot(censorText("Hello World", c("hello", "world")) == "***** *****")
+    stopifnot(censorText("nothing to censor", c("foo")) == "nothing to censor")
+    stopifnot(censorText("Case SENSITIVE", c("case")) == "**** SENSITIVE")
+    cat("Passed!\n")
+}
+
+
+censorText <- function(text, words) {
+    # Make lower case everything
+    result <- str_to_lower(text)
+    words <- str_to_lower(words)
+    
+    # For each word, replace with asterisks with same length as the word
+    for (word in words) {
+        replacement <- str_dup("*", str_length(word))
+        result <- str_replace_all(result, word, replacement)
+    }
+    
+    # Go back and restore any non-censored characters from the original text
+    result <- str_split(result, '')[[1]]
+    text <- str_split(text, '')[[1]]
+    for (i in seq(length(result))) {
+        if (result[i] != '*') {
+            result[i] <- text[i]
+        }
+    }
+    
+    return(paste(result, collapse = ''))
+}
+
+test_censorText()
 
 
 # ------------------------------------------------
-# Your turn 2:
+# Extra Practice
+
 
 
 # 1) sortString(s): Write the function sortString(s) that takes

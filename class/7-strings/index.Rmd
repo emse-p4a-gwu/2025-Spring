@@ -28,7 +28,7 @@ output:
 
 class: inverse
 
-# Quiz 4
+# Quiz 6
 
 ```{r, echo=FALSE}
 countdown(
@@ -53,11 +53,6 @@ countdown(
 ]
 
 .rightcol[
-
-<br>
-<center>
-<img src="https://github.com/emse-p4a-gwu/2022-Spring/raw/main/images/quiz_doge.png" width="400">
-</center>
 
 ]
 
@@ -1075,6 +1070,39 @@ countdown(
 ```
 
 ## Your turn
+
+### `censorText(text, words)`
+
+Write a function that takes a string `'text'` and a character vector `'words'`, and replaces all occurrences of any word in `'words'` with asterisks (one `*` per letter). The function should be case-insensitive.
+
+Some test cases:
+
+.font90[
+
+- `censorText("This is a bad example", c("bad")) == "This is a *** example"`
+- `censorText("hello world", c("hello", "world")) == "***** *****"`
+- `censorText("Hello World", c("hello", "world")) == "***** *****"`
+- `censorText("nothing to censor", c("foo")) == "nothing to censor"`
+- `censorText("Case SENSITIVE", c("case")) == "**** SENSITIVE"`
+
+]
+
+---
+
+class: inverse
+
+```{r, echo=FALSE}
+countdown(
+  minutes      = 15,
+  warn_when    = 30,
+  update_every = 1,
+  top          = 0,
+  right        = 0,
+  font_size    = '2em'
+)
+```
+
+## Extra practice
 
 .font90[
 

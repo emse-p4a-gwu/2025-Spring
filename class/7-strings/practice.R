@@ -121,6 +121,31 @@ test_isPalindrome()
 # Your turn 2:
 
 
+# Write a function that takes a string 'text' and a character 
+# vector 'words', and replaces all occurrences of any word in 'words'
+# with asterisks (one `*` per letter). The function should be 
+# case-insensitive.
+
+test_censorText <- function() {
+    cat("Testing censorText()...")
+    stopifnot(censorText("This is a bad example", c("bad")) == "This is a *** example")
+    stopifnot(censorText("hello world", c("hello", "world")) == "***** *****")
+    stopifnot(censorText("Hello World", c("hello", "world")) == "***** *****")
+    stopifnot(censorText("nothing to censor", c("foo")) == "nothing to censor")
+    stopifnot(censorText("Case SENSITIVE", c("case")) == "**** SENSITIVE")
+    cat("Passed!\n")
+}
+
+censorText <- function(s) {
+    # Write code here
+}
+
+test_censorText()
+
+
+# ------------------------------------------------
+# Extra Practice
+
 # 1) sortString(s): Write the function sortString(s) that takes
 #    a string s and returns back an alphabetically sorted string.
 
