@@ -4,7 +4,7 @@
     <title>Data Frames</title>
     <meta charset="utf-8" />
     <meta name="author" content="John Paul Helveston" />
-    <meta name="date" content="2024-03-21" />
+    <meta name="date" content="2025-03-20" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
@@ -60,19 +60,11 @@ class: middle, inverse
 
 ### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg> EMSE 4571 / 6571: Intro to Programming for Analytics
 ### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg> John Paul Helveston
-### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg> March 21, 2024
+### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg> March 20, 2025
 
 ]
 
 
-
----
-
-class: center, middle
-
-# HW Change
-
-## HWs are now due by midnight on **Tuesday night**&lt;br&gt;(not Wednesday night)
 
 ---
 
@@ -166,7 +158,7 @@ Tufte, Edward R. (1997) _Visual Explanations: Images and Quantities,&lt;br&gt; E
 Make sure you have these packages installed and loaded:
 
 
-```r
+``` r
 install.packages("stringr")
 install.packages("dplyr")
 install.packages("ggplot2")
@@ -223,7 +215,7 @@ class: center
 # The data frame...in R
 
 
-```r
+``` r
 beatles &lt;- tibble(
     firstName   = c("John", "Paul", "Ringo", "George"),
     lastName    = c("Lennon", "McCartney", "Starr", "Harrison"),
@@ -252,7 +244,7 @@ beatles
 .leftcol[
 
 
-```r
+``` r
 View(beatles)
 ```
 
@@ -265,7 +257,7 @@ View(beatles)
 ## **Columns**: _Vectors_ of values (must be same data type)
 
 
-```r
+``` r
 beatles
 ```
 
@@ -284,7 +276,7 @@ beatles
 Extract a column using `$`
 
 
-```r
+``` r
 beatles$firstName
 ```
 
@@ -301,7 +293,7 @@ beatles$firstName
 Information about _John Lennon_ is in the first row:
 
 
-```r
+``` r
 beatles[1,]
 ```
 
@@ -317,7 +309,7 @@ beatles[1,]
 Information about _Paul McCartney_ is in the second row:
 
 
-```r
+``` r
 beatles[2,]
 ```
 
@@ -333,7 +325,7 @@ beatles[2,]
 ## Make a data frame with `data.frame()`
 
 
-```r
+``` r
 beatles &lt;- data.frame(
     firstName   = c("John", "Paul", "Ringo", "George"),
     lastName    = c("Lennon", "McCartney", "Starr", "Harrison"),
@@ -346,7 +338,7 @@ beatles &lt;- data.frame(
 --
 
 
-```r
+``` r
 beatles
 ```
 
@@ -363,12 +355,12 @@ beatles
 ## Make a data frame with `tibble()`
 
 
-```r
+``` r
 library(dplyr)
 ```
 
 
-```r
+``` r
 beatles &lt;- tibble(
     firstName   = c("John", "Paul", "Ringo", "George"),
     lastName    = c("Lennon", "McCartney", "Starr", "Harrison"),
@@ -381,7 +373,7 @@ beatles &lt;- tibble(
 --
 
 
-```r
+``` r
 beatles
 ```
 
@@ -419,7 +411,7 @@ Example: `faithful` vs. `as_tibble(faithful)`
 ## Data frame vectors must have the same length
 
 
-```r
+``` r
 beatles &lt;- tibble(
 *   firstName   = c("John", "Paul", "Ringo", "George", "Bob"), # Added "Bob"
     lastName    = c("Lennon", "McCartney", "Starr", "Harrison"),
@@ -443,7 +435,7 @@ beatles &lt;- tibble(
 ## Use `NA` for missing values
 
 
-```r
+``` r
 beatles &lt;- tibble(
     firstName   = c("John", "Paul", "Ringo", "George", "Bob"), 
 *   lastName    = c("Lennon", "McCartney", "Starr", "Harrison", NA), # Added NAs
@@ -456,7 +448,7 @@ beatles &lt;- tibble(
 --
 
 
-```r
+``` r
 beatles
 ```
 
@@ -476,7 +468,7 @@ beatles
 # Dimensions: `nrow()`, `ncol()`, &amp; `dim()`
 
 
-```r
+``` r
 nrow(beatles) # Number of rows
 ```
 
@@ -484,7 +476,7 @@ nrow(beatles) # Number of rows
 #&gt; [1] 5
 ```
 
-```r
+``` r
 ncol(beatles) # Number of columns
 ```
 
@@ -492,7 +484,7 @@ ncol(beatles) # Number of columns
 #&gt; [1] 5
 ```
 
-```r
+``` r
 dim(beatles)  # Number of rows and columns
 ```
 
@@ -507,7 +499,7 @@ dim(beatles)  # Number of rows and columns
 Get the names of columns:
 
 
-```r
+``` r
 names(beatles) # Usually just use this
 ```
 
@@ -515,7 +507,7 @@ names(beatles) # Usually just use this
 #&gt; [1] "firstName"   "lastName"    "instrument"  "yearOfBirth" "deceased"
 ```
 
-```r
+``` r
 colnames(beatles)
 ```
 
@@ -528,7 +520,7 @@ colnames(beatles)
 Get the names of rows (rarely needed):
 
 
-```r
+``` r
 rownames(beatles)
 ```
 
@@ -543,7 +535,7 @@ rownames(beatles)
 Change the column names with `names()` or `colnames()`:
 
 
-```r
+``` r
 names(beatles) &lt;- c('one', 'two', 'three', 'four', 'five')
 beatles
 ```
@@ -567,7 +559,7 @@ beatles
 Make all the column names upper-case:
 
 
-```r
+``` r
 colnames(beatles) &lt;- stringr::str_to_upper(colnames(beatles))
 beatles
 ```
@@ -591,7 +583,7 @@ beatles
 Note: `bind_cols()` is from the **dplyr** library
 
 
-```r
+``` r
 names &lt;- tibble(
     firstName = c("John", "Paul", "Ringo", "George"),
     lastName  = c("Lennon", "McCartney", "Starr", "Harrison"))
@@ -603,7 +595,7 @@ instruments &lt;- tibble(
 --
 
 
-```r
+``` r
 bind_cols(names, instruments)
 ```
 
@@ -624,7 +616,7 @@ bind_cols(names, instruments)
 Note: `bind_rows()` is from the **dplyr** library
 
 
-```r
+``` r
 members1 &lt;- tibble(
     firstName = c("John", "Paul"),
     lastName  = c("Lennon", "McCartney"))
@@ -637,7 +629,7 @@ members2 &lt;- tibble(
 --
 
 
-```r
+``` r
 bind_rows(members1, members2)
 ```
 
@@ -656,7 +648,7 @@ bind_rows(members1, members2)
 ## Note: `bind_rows()` requires the **same** columns names:
 
 
-```r
+``` r
 *colnames(members2) &lt;- c("firstName", "LastName")
 bind_rows(members1, members2)
 ```
@@ -677,7 +669,7 @@ Note how `&lt;NA&gt;`s were created
 
 class: inverse
 
-<div class="countdown" id="timer_36e8d264" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_fc86e0a0" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">06</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -714,7 +706,7 @@ class: inverse, middle
 
 
 
-```r
+``` r
 beatles$firstName
 ```
 
@@ -725,7 +717,7 @@ beatles$firstName
 --
 
 
-```r
+``` r
 beatles$lastName
 ```
 
@@ -742,7 +734,7 @@ beatles$lastName
 Add the hometown of the bandmembers:
 
 
-```r
+``` r
 beatles$hometown &lt;- 'Liverpool'
 beatles
 ```
@@ -764,7 +756,7 @@ beatles
 Add a new `alive` variable:
 
 
-```r
+``` r
 beatles$alive &lt;- c(FALSE, TRUE, TRUE, FALSE)
 beatles
 ```
@@ -788,7 +780,7 @@ beatles
 Compute and add the age of the bandmembers:
 
 
-```r
+``` r
 beatles$age &lt;- 2023 - beatles$yearOfBirth
 beatles
 ```
@@ -812,7 +804,7 @@ beatles
 General form for indexing elements:
 
 
-```r
+``` r
 df[row, column]
 ```
 
@@ -823,7 +815,7 @@ df[row, column]
 Select the element in row 1, column 2:
 
 
-```r
+``` r
 beatles[1, 2]
 ```
 
@@ -843,7 +835,7 @@ beatles[1, 2]
 Select the elements in rows 1 &amp; 2 and columns 2 &amp; 3:
 
 
-```r
+``` r
 beatles[c(1, 2), c(2, 3)]
 ```
 
@@ -864,7 +856,7 @@ beatles[c(1, 2), c(2, 3)]
 --
 
 
-```r
+``` r
 beatles[c(1, 2),] # Selects all COLUMNS for rows 1 &amp; 2
 ```
 
@@ -879,7 +871,7 @@ beatles[c(1, 2),] # Selects all COLUMNS for rows 1 &amp; 2
 --
 
 
-```r
+``` r
 beatles[,c(1, 2)] # Selects all ROWS for columns 1 &amp; 2
 ```
 
@@ -900,7 +892,7 @@ beatles[,c(1, 2)] # Selects all ROWS for columns 1 &amp; 2
 --
 
 
-```r
+``` r
 beatles[-1, ] # Select all ROWS except the first
 ```
 
@@ -916,7 +908,7 @@ beatles[-1, ] # Select all ROWS except the first
 --
 
 
-```r
+``` r
 beatles[,-1] # Select all COLUMNS except the first
 ```
 
@@ -943,7 +935,7 @@ Note: you don't need the comma to select an entire column
 One column
 
 
-```r
+``` r
 beatles['firstName']
 ```
 
@@ -965,7 +957,7 @@ beatles['firstName']
 
 .rightcol[
 
-```r
+``` r
 beatles[c('firstName', 'lastName')]
 ```
 
@@ -990,7 +982,7 @@ beatles[c('firstName', 'lastName')]
 **Which Beatles members are still alive?**&lt;br&gt;Create a logical vector using the `deceased` column:
 
 
-```r
+``` r
 beatles$deceased == FALSE
 ```
 
@@ -1003,7 +995,7 @@ beatles$deceased == FALSE
 Insert this logical vector in the ROW position of `beatles[,]`:
 
 
-```r
+``` r
 beatles[beatles$deceased == FALSE,]
 ```
 
@@ -1019,7 +1011,7 @@ beatles[beatles$deceased == FALSE,]
 
 class: inverse
 
-<div class="countdown" id="timer_03c67389" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_497c3110" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1038,7 +1030,7 @@ class: inverse, center
 
 # .fancy[Intermission]
 
-<div class="countdown" id="timer_bc7b0dcf" data-warn-when="30" data-update-every="1" tabindex="0" style="top:1;right:0;bottom:0;left:0;margin:5%;font-size:8em;">
+<div class="countdown" id="timer_1e95b344" data-warn-when="30" data-update-every="1" tabindex="0" style="top:1;right:0;bottom:0;left:0;margin:5%;font-size:8em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1078,7 +1070,7 @@ class: inverse, middle
 ## Data from an R package
 
 
-```r
+``` r
 library(ggplot2)
 ```
 
@@ -1087,7 +1079,7 @@ library(ggplot2)
 See which data frames are available in a package:
 
 
-```r
+``` r
 data(package = "ggplot2")
 ```
 
@@ -1096,7 +1088,7 @@ data(package = "ggplot2")
 # Find out about package data sets with `?`
 
 
-```r
+``` r
 ?msleep
 ```
 
@@ -1119,7 +1111,7 @@ This is an updated and expanded version of the mammals sleep dataset. Updated sl
 Look at the data in a "spreadsheet"-like way:
 
 
-```r
+``` r
 View(msleep)
 ```
 
@@ -1132,7 +1124,7 @@ This is "read-only" so you can't corrupt the data 😄
 Preview each variable with `str()` or `glimpse()`
 
 
-```r
+``` r
 library(dplyr)
 
 glimpse(msleep)
@@ -1168,7 +1160,7 @@ glimpse(msleep)
 View the **first** 6 rows with `head()`
 
 
-```r
+``` r
 head(msleep)
 ```
 
@@ -1194,7 +1186,7 @@ head(msleep)
 View the **last** 6 rows with `tail()`
 
 
-```r
+``` r
 tail(msleep)
 ```
 
@@ -1250,14 +1242,14 @@ If you **must** open it in Excel:
 ## 1. Create a path to the data
 
 
-```r
+``` r
 library(here)
 *pathToData &lt;- here('data', 'data.csv')
 pathToData
 ```
 
 ```
-#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2024-Spring/class/8-data-frames/data/data.csv"
+#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2025-Spring/class/8-data-frames/data/data.csv"
 ```
 
 --
@@ -1265,7 +1257,7 @@ pathToData
 ## 2. Import the data
 
 
-```r
+``` r
 library(readr)
 *df &lt;- read_csv(pathToData)
 ```
@@ -1277,12 +1269,12 @@ library(readr)
 The `here()` function builds the path to your **root** to your _working directory_ &lt;br&gt;(this is where your `.Rproj` file lives!)
 
 
-```r
+``` r
 here()
 ```
 
 ```
-#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2024-Spring/class/8-data-frames"
+#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2025-Spring/class/8-data-frames"
 ```
 
 --
@@ -1290,13 +1282,13 @@ here()
 The `here()` function builds the path to files _inside_ your working directory
 
 
-```r
+``` r
 path_to_data &lt;- here('data', 'data.csv')
 path_to_data
 ```
 
 ```
-#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2024-Spring/class/8-data-frames/data/data.csv"
+#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2025-Spring/class/8-data-frames/data/data.csv"
 ```
 
 ---
@@ -1306,7 +1298,7 @@ path_to_data
 ### (they can break on different computers)
 
 
-```r
+``` r
 path_to_data &lt;- 'data/data.csv'
 path_to_data
 ```
@@ -1350,7 +1342,7 @@ class: center
 .rightcol[
 
 
-```r
+``` r
 path_to_data &lt;- here('data', 'data.csv')
 *data &lt;- read_csv(path_to_data)
 ```
@@ -1366,14 +1358,14 @@ path_to_data &lt;- here('data', 'data.csv')
 ## 1. Create a path to where you want to save the data
 
 
-```r
+``` r
 library(here)
 *pathToData &lt;- here('data', 'data_new.csv')
 pathToData
 ```
 
 ```
-#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2024-Spring/class/8-data-frames/data/data_new.csv"
+#&gt; [1] "/Users/jhelvy/gh/teaching/P4A/2025-Spring/class/8-data-frames/data/data_new.csv"
 ```
 
 --
@@ -1381,7 +1373,7 @@ pathToData
 ## 2. Write the file to disc
 
 
-```r
+``` r
 library(readr)
 *write_csv(data, pathToData)
 ```
@@ -1390,7 +1382,7 @@ library(readr)
 
 class: inverse
 
-<div class="countdown" id="timer_934776ec" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_77400b02" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1434,7 +1426,7 @@ Example: Filter rows to find which Beatles members are still alive?
 **Base R**:
 
 
-```r
+``` r
 beatles[beatles$deceased == FALSE,]
 ```
 
@@ -1443,7 +1435,7 @@ beatles[beatles$deceased == FALSE,]
 **dplyr**:
 
 
-```r
+``` r
 filter(beatles, deceased == FALSE)
 ```
 
@@ -1485,7 +1477,7 @@ filter(beatles, deceased == FALSE)
 
 ---
 
-# A note about [HW 8](https://p4a.seas.gwu.edu/2024-Spring/hw/8-data-frames.html)
+# A note about [HW 8](https://p4a.seas.gwu.edu/2025-Spring/hw/8-data-frames.html)
 
 - You have what you need to start now.
 - It will be _much_ easier if you use the **dplyr** functions (i.e. read ahead). Feel free to try using them on this assignment.
@@ -1494,7 +1486,7 @@ filter(beatles, deceased == FALSE)
 
 class: inverse
 
-<div class="countdown" id="timer_cbc46b3d" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_5b09a1f4" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
