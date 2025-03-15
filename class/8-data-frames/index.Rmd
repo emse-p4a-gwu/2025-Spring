@@ -3,7 +3,7 @@ title: "Data Frames"
 subtitle: "EMSE 4571 / 6571: Intro to Programming for Analytics"
 date: March 20, 2025
 week: 10
-class: "10-data-frames"
+class: "8-data-frames"
 author: "John Paul Helveston"
 institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
 output:
@@ -36,14 +36,6 @@ beatles_reset <- tibble(
 pathToData <- here::here('data', 'data.csv')
 wildlife_impacts <- read_csv(pathToData)
 ```
-
----
-
-class: center, middle
-
-# HW Change
-
-## HWs are now due by midnight on **Tuesday night**<br>(not Wednesday night)
 
 ---
 
