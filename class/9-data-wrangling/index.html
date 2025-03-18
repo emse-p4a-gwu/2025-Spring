@@ -4,7 +4,7 @@
     <title>Data Wrangling</title>
     <meta charset="utf-8" />
     <meta name="author" content="John Paul Helveston" />
-    <meta name="date" content="2024-03-28" />
+    <meta name="date" content="2025-03-27" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
@@ -60,7 +60,7 @@ class: middle, inverse
 
 ### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg> EMSE 4571 / 6571: Intro to Programming for Analytics
 ### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg> John Paul Helveston
-### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg> March 28, 2024
+### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg> March 27, 2025
 
 ]
 
@@ -72,7 +72,7 @@ class: inverse
 
 # Quiz 5
 
-<div class="countdown" id="timer_393ffa1e" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:3em;">
+<div class="countdown" id="timer_eab55562" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:3em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -106,7 +106,7 @@ class: inverse
 1. Copy-paste the code and never run it.
 
 
-```r
+``` r
 (df$Population / df$State.Population) * 100
 ```
 
@@ -115,14 +115,14 @@ class: inverse
 2. Do things I've explicitly told you not to do.
 
 
-```r
+``` r
 df &lt;- read.csv("data/prisoners2019.csv") # Bad
 ```
  
 --
 
 
-```r
+``` r
 df &lt;- read_csv(here("data", "prisoners2019.csv")) # Good
 ```
 
@@ -131,7 +131,7 @@ df &lt;- read_csv(here("data", "prisoners2019.csv")) # Good
 3. Use functions we've never covered.
 
 
-```r
+``` r
 total_prison_population &lt;- aggregate(Population ~ State, df, sum)
 ```
 
@@ -174,7 +174,7 @@ class: inverse, middle
 Make sure you have the "tidyverse" installed
 
 
-```r
+``` r
 install.packages('tidyverse')
 ```
 
@@ -239,7 +239,7 @@ class: center, middle
 # This week's British Band: **The Spice Girls**
 
 
-```r
+``` r
 spicegirls &lt;- tibble(
     firstName   = c("Melanie", "Melanie", "Emma", "Geri", "Victoria"),
     lastName    = c("Brown", "Chisholm", "Bunton", "Halliwell", "Beckham"),
@@ -281,7 +281,7 @@ Example: Select the columns `firstName` &amp; `lastName`
 **Base R**:
 
 
-```r
+``` r
 spicegirls[c('firstName', 'lastName')]
 ```
 
@@ -305,7 +305,7 @@ Example: Select the columns `firstName` &amp; `lastName`
 **dplyr**: (note that you don't need `""` around names)
 
 
-```r
+``` r
 select(spicegirls, firstName, lastName)
 ```
 
@@ -327,7 +327,7 @@ select(spicegirls, firstName, lastName)
 Use the `-` sign to drop columns:
 
 
-```r
+``` r
 select(spicegirls, -firstName, -lastName)
 ```
 
@@ -360,7 +360,7 @@ Select columns based on name criteria:
 Select only the "name" columns
 
 
-```r
+``` r
 select(spicegirls, ends_with('name'))
 ```
 
@@ -391,7 +391,7 @@ select(spicegirls, ends_with('name'))
 Example: Filter the band members born after 1974
 
 
-```r
+``` r
 ## # A tibble: 5 x 5
 ##   firstName lastName  spice  yearOfBirth deceased
 ##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;        &lt;dbl&gt; &lt;lgl&gt;
@@ -411,7 +411,7 @@ Example: Filter the band members born after 1974
 **Base R**:
 
 
-```r
+``` r
 spicegirls[spicegirls$yearOfBirth &gt; 1974,]
 ```
 
@@ -432,7 +432,7 @@ Example: Filter the band members born after 1974
 **dplyr**:
 
 
-```r
+``` r
 filter(spicegirls, yearOfBirth &gt; 1974)
 ```
 
@@ -453,7 +453,7 @@ Example: Filter the band members born after 1974 **&amp; are named "Melanie"**
 **dplyr**:
 
 
-```r
+``` r
 filter(spicegirls, yearOfBirth &gt; 1974 &amp; firstName == "Melanie")
 ```
 
@@ -487,7 +487,7 @@ Values in the set c(1, 4) | `value %in% c(1, 4)`
 Drop all rows where `variable` is `NA`
 
 
-```r
+``` r
 filter(data, !is.na(variable))
 ```
 
@@ -495,7 +495,7 @@ filter(data, !is.na(variable))
 
 class: inverse
 
-<div class="countdown" id="timer_1677accd" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_622f44d6" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -567,7 +567,7 @@ class: inverse, middle
 **Without Pipes** (read from inside-out):
 
 
-```r
+``` r
 leave_house(get_dressed(get_out_of_bed(wake_up(me))))
 ```
 
@@ -576,7 +576,7 @@ leave_house(get_dressed(get_out_of_bed(wake_up(me))))
 **With Pipes**:
 
 
-```r
+``` r
 me %&gt;%
     wake_up() %&gt;%
     get_out_of_bed() %&gt;%
@@ -598,7 +598,7 @@ me %&gt;%
 **Without Pipes**:
 
 
-```r
+``` r
 select(filter(spicegirls, yearOfBirth &gt; 1974), firstName, lastName)
 ```
 
@@ -620,7 +620,7 @@ select(filter(spicegirls, yearOfBirth &gt; 1974), firstName, lastName)
 **With Pipes**:
 
 
-```r
+``` r
 spicegirls %&gt;%
     filter(yearOfBirth &gt; 1974) %&gt;%
     select(firstName, lastName)
@@ -641,14 +641,14 @@ spicegirls %&gt;%
 **Without Pipes**:
 
 
-```r
+``` r
 select(filter(spicegirls, yearOfBirth &gt; 1974), firstName, lastName)
 ```
 
 **With Pipes**: Note that you don't need to repeat the dataframe name
 
 
-```r
+``` r
 spicegirls %&gt;%
     filter(yearOfBirth &gt; 1974) %&gt;%
     select(firstName, lastName)
@@ -663,7 +663,7 @@ spicegirls %&gt;%
 Sort the data frame by year of birth:
 
 
-```r
+``` r
 spicegirls %&gt;%
     arrange(yearOfBirth)
 ```
@@ -686,7 +686,7 @@ spicegirls %&gt;%
 Use the `desc()` function to sort in descending order:
 
 
-```r
+``` r
 spicegirls %&gt;%
     arrange(desc(yearOfBirth))
 ```
@@ -709,7 +709,7 @@ spicegirls %&gt;%
 Example of filtering, arranging, and selecting:
 
 
-```r
+``` r
 spicegirls %&gt;%
     filter(yearOfBirth &lt; 1975) %&gt;%
     arrange(desc(yearOfBirth)) %&gt;%
@@ -729,7 +729,7 @@ spicegirls %&gt;%
 
 class: inverse
 
-<div class="countdown" id="timer_41168c7a" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_70bfc171" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -756,7 +756,7 @@ class: inverse, center
 
 # .fancy[Break]
 
-<div class="countdown" id="timer_2d9bfcac" data-warn-when="30" data-update-every="1" tabindex="0" style="top:1;right:0;bottom:0;left:0;margin:5%;font-size:8em;">
+<div class="countdown" id="timer_131e8148" data-warn-when="30" data-update-every="1" tabindex="0" style="top:1;right:0;bottom:0;left:0;margin:5%;font-size:8em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -808,7 +808,7 @@ Example: Use the `yearOfBirth` variable to compute the age of each band member
 **Base R**:
 
 
-```r
+``` r
 spicegirls$age &lt;- 2022 - spicegirls$yearOfBirth
 ```
 
@@ -817,7 +817,7 @@ spicegirls$age &lt;- 2022 - spicegirls$yearOfBirth
 **dplyr**:
 
 
-```r
+``` r
 spicegirls %&gt;%
     mutate(age = 2022 - yearOfBirth)
 ```
@@ -838,7 +838,7 @@ spicegirls %&gt;%
 # You can _immediately_ use new variables
 
 
-```r
+``` r
 spicegirls %&gt;%
     mutate(
         age = 2022 - yearOfBirth,
@@ -865,7 +865,7 @@ spicegirls %&gt;%
 --
 
 
-```r
+``` r
 spicegirls %&gt;%
     mutate(
         yobAfter74 = ifelse(yearOfBirth &gt; 1974, "yes", "no"))
@@ -886,7 +886,7 @@ spicegirls %&gt;%
 
 class: inverse
 
-<div class="countdown" id="timer_37d0d914" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_33ba1a7a" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -942,7 +942,7 @@ class: center
 # Compute by group with `group_by`
 
 
-```r
+``` r
 bands
 ```
 
@@ -968,10 +968,10 @@ bands
 Compute the mean band member age across the whole dataset
 
 
-```r
+``` r
 bands %&gt;%
     mutate(
-        age = 2024 - yearOfBirth,
+        age = 2025 - yearOfBirth,
 *       mean_age = mean(age) # This is the mean across both bands
     )
 ```
@@ -980,15 +980,15 @@ bands %&gt;%
 #&gt; # A tibble: 9 × 7
 #&gt;   firstName lastName  yearOfBirth deceased band         age mean_age
 #&gt;   &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt; &lt;lgl&gt;    &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;
-#&gt; 1 Melanie   Brown            1975 FALSE    spicegirls    49     64.4
-#&gt; 2 Melanie   Chisholm         1974 FALSE    spicegirls    50     64.4
-#&gt; 3 Emma      Bunton           1976 FALSE    spicegirls    48     64.4
-#&gt; 4 Geri      Halliwell        1972 FALSE    spicegirls    52     64.4
-#&gt; 5 Victoria  Beckham          1974 FALSE    spicegirls    50     64.4
-#&gt; 6 John      Lennon           1940 TRUE     beatles       84     64.4
-#&gt; 7 Paul      McCartney        1942 FALSE    beatles       82     64.4
-#&gt; 8 Ringo     Starr            1940 FALSE    beatles       84     64.4
-#&gt; 9 George    Harrison         1943 TRUE     beatles       81     64.4
+#&gt; 1 Melanie   Brown            1975 FALSE    spicegirls    50     65.4
+#&gt; 2 Melanie   Chisholm         1974 FALSE    spicegirls    51     65.4
+#&gt; 3 Emma      Bunton           1976 FALSE    spicegirls    49     65.4
+#&gt; 4 Geri      Halliwell        1972 FALSE    spicegirls    53     65.4
+#&gt; 5 Victoria  Beckham          1974 FALSE    spicegirls    51     65.4
+#&gt; 6 John      Lennon           1940 TRUE     beatles       85     65.4
+#&gt; 7 Paul      McCartney        1942 FALSE    beatles       83     65.4
+#&gt; 8 Ringo     Starr            1940 FALSE    beatles       85     65.4
+#&gt; 9 George    Harrison         1943 TRUE     beatles       82     65.4
 ```
 
 ---
@@ -998,9 +998,9 @@ bands %&gt;%
 Compute the mean band member age **for each band**
 
 
-```r
+``` r
 bands %&gt;%
-    mutate(age = 2024 - yearOfBirth) %&gt;%
+    mutate(age = 2025 - yearOfBirth) %&gt;%
 *   group_by(band) %&gt;% # Everything after this will be done each band
     mutate(mean_age = mean(age))
 ```
@@ -1010,15 +1010,15 @@ bands %&gt;%
 #&gt; # Groups:   band [2]
 #&gt;   firstName lastName  yearOfBirth deceased band         age mean_age
 #&gt;   &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt; &lt;lgl&gt;    &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;
-#&gt; 1 Melanie   Brown            1975 FALSE    spicegirls    49     49.8
-#&gt; 2 Melanie   Chisholm         1974 FALSE    spicegirls    50     49.8
-#&gt; 3 Emma      Bunton           1976 FALSE    spicegirls    48     49.8
-#&gt; 4 Geri      Halliwell        1972 FALSE    spicegirls    52     49.8
-#&gt; 5 Victoria  Beckham          1974 FALSE    spicegirls    50     49.8
-#&gt; 6 John      Lennon           1940 TRUE     beatles       84     82.8
-#&gt; 7 Paul      McCartney        1942 FALSE    beatles       82     82.8
-#&gt; 8 Ringo     Starr            1940 FALSE    beatles       84     82.8
-#&gt; 9 George    Harrison         1943 TRUE     beatles       81     82.8
+#&gt; 1 Melanie   Brown            1975 FALSE    spicegirls    50     50.8
+#&gt; 2 Melanie   Chisholm         1974 FALSE    spicegirls    51     50.8
+#&gt; 3 Emma      Bunton           1976 FALSE    spicegirls    49     50.8
+#&gt; 4 Geri      Halliwell        1972 FALSE    spicegirls    53     50.8
+#&gt; 5 Victoria  Beckham          1974 FALSE    spicegirls    51     50.8
+#&gt; 6 John      Lennon           1940 TRUE     beatles       85     83.8
+#&gt; 7 Paul      McCartney        1942 FALSE    beatles       83     83.8
+#&gt; 8 Ringo     Starr            1940 FALSE    beatles       85     83.8
+#&gt; 9 George    Harrison         1943 TRUE     beatles       82     83.8
 ```
 
 ---
@@ -1039,9 +1039,9 @@ class: center
 Compute the mean band member age across the whole dataset
 
 
-```r
+``` r
 bands %&gt;%
-    mutate(age = 2024 - yearOfBirth) %&gt;%
+    mutate(age = 2025 - yearOfBirth) %&gt;%
     summarise(mean_age = mean(age))
 ```
 
@@ -1049,7 +1049,7 @@ bands %&gt;%
 #&gt; # A tibble: 1 × 1
 #&gt;   mean_age
 #&gt;      &lt;dbl&gt;
-#&gt; 1     64.4
+#&gt; 1     65.4
 ```
 
 ---
@@ -1059,9 +1059,9 @@ bands %&gt;%
 Compute the mean band member age for **each band**
 
 
-```r
+``` r
 bands %&gt;%
-    mutate(age = 2024 - yearOfBirth) %&gt;%
+    mutate(age = 2025 - yearOfBirth) %&gt;%
 *   group_by(band) %&gt;%
     summarise(mean_age = mean(age))
 ```
@@ -1070,8 +1070,8 @@ bands %&gt;%
 #&gt; # A tibble: 2 × 2
 #&gt;   band       mean_age
 #&gt;   &lt;chr&gt;         &lt;dbl&gt;
-#&gt; 1 beatles        82.8
-#&gt; 2 spicegirls     49.8
+#&gt; 1 beatles        83.8
+#&gt; 2 spicegirls     50.8
 ```
 
 ---
@@ -1081,9 +1081,9 @@ bands %&gt;%
 Compute the mean, min, and max band member age for **each band**
 
 
-```r
+``` r
 bands %&gt;%
-    mutate(age = 2024 - yearOfBirth) %&gt;%
+    mutate(age = 2025 - yearOfBirth) %&gt;%
     group_by(band) %&gt;%
     summarise(
         mean_age = mean(age),
@@ -1096,8 +1096,8 @@ bands %&gt;%
 #&gt; # A tibble: 2 × 4
 #&gt;   band       mean_age min_age max_age
 #&gt;   &lt;chr&gt;         &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-#&gt; 1 beatles        82.8      81      84
-#&gt; 2 spicegirls     49.8      48      52
+#&gt; 1 beatles        83.8      82      85
+#&gt; 2 spicegirls     50.8      49      53
 ```
 
 ---
@@ -1107,7 +1107,7 @@ bands %&gt;%
 How many members are in each band?
 
 
-```r
+``` r
 bands %&gt;%
     group_by(band) %&gt;%
 *   summarise(numMembers = n())
@@ -1130,7 +1130,7 @@ These do the same thing:
 .leftcol[
 
 
-```r
+``` r
 bands %&gt;%
     group_by(band) %&gt;%
     summarise(numMembers = n())
@@ -1149,7 +1149,7 @@ bands %&gt;%
 .rightcol[
 
 
-```r
+``` r
 bands %&gt;%
     count(band)
 ```
@@ -1171,7 +1171,7 @@ bands %&gt;%
 You can count by combinations of variables
 
 
-```r
+``` r
 bands %&gt;%
     mutate(nameStartsWithG = str_detect(firstName, '^G')) %&gt;%
     count(band, nameStartsWithG)
@@ -1191,7 +1191,7 @@ bands %&gt;%
 
 class: inverse
 
-<div class="countdown" id="timer_9f824bb9" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_dd2c97d1" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1221,7 +1221,7 @@ Then use `write_csv()` to save it as the file "height_summary.csv" in your "data
 Make sure you install the package `nycflights13`
 
 
-```r
+``` r
 install.packages('nycflights13')
 ```
 
@@ -1230,7 +1230,7 @@ install.packages('nycflights13')
 This package includes **5 data frames**:
 
 
-```r
+``` r
 airlines
 airports
 flights
