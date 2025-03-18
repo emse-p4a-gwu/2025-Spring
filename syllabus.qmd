@@ -342,9 +342,9 @@ Cheating on quizzes, assignments, or the final project can include:
 
 ### Penalties
 
-Violations will be reported to the [Office of Student Rights & Responsibilities](https://studentconduct.gwu.edu/charging-academic-integrity-violations). Penalties are decided by the course instructors, and can vary based on the severity of the offense. Possible penalties include:
+Penalties are decided by the course instructors and can vary based on the severity of the offense. Possible penalties include:
 
-- Receiving a 0 on the assignment/quiz in question.
+- Receiving a 0 on the assignment in question.
 - Receiving a full letter grade deduction in the course.
 - Automatically failing the course.
 
