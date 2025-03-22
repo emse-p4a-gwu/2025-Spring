@@ -51,7 +51,7 @@ bands <- bind_rows(spicegirls, beatles)
 
 class: inverse
 
-# Quiz 5
+# Quiz 7
 
 ```{r, echo=FALSE}
 countdown(
@@ -77,10 +77,6 @@ countdown(
 
 .rightcol[
 
-<br>
-<center>
-<img src="https://github.com/emse-p4a-gwu/2022-Spring/raw/main/images/quiz_doge.png" width="400">
-</center>
 
 ]
 
