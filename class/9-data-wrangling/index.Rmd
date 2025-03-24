@@ -196,7 +196,7 @@ class: center, middle
 
 --
 
-## Use [this cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+## Use [this cheatsheet](https://rstudio.github.io/cheatsheets/html/data-transformation.html)
 
 ---
 
@@ -627,7 +627,7 @@ Example: Use the `yearOfBirth` variable to compute the age of each band member
 **Base R**:
 
 ```{r, eval=FALSE}
-spicegirls$age <- 2022 - spicegirls$yearOfBirth
+spicegirls$age <- 2025 - spicegirls$yearOfBirth
 ```
 
 --
@@ -636,7 +636,7 @@ spicegirls$age <- 2022 - spicegirls$yearOfBirth
 
 ```{r}
 spicegirls %>%
-    mutate(age = 2022 - yearOfBirth)
+    mutate(age = 2025 - yearOfBirth)
 ```
 
 ---
@@ -646,7 +646,7 @@ spicegirls %>%
 ```{r}
 spicegirls %>%
     mutate(
-        age = 2022 - yearOfBirth,
+        age = 2025 - yearOfBirth,
         meanAge  = mean(age)) # Immediately using the "age" variable #<<
 ```
 
@@ -884,7 +884,7 @@ Then use `write_csv()` to save it as the file "height_summary.csv" in your "data
 
 ---
 
-# HW 9
+# [HW 9](https://p4a.seas.gwu.edu/2025-Spring/hw/9-data-wrangling.html)
 
 --
 
