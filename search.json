@@ -530,6 +530,16 @@
     ]
   },
   {
+    "objectID": "faq.html#how-to-load-a-file-under-my-project-directory",
+    "href": "faq.html#how-to-load-a-file-under-my-project-directory",
+    "title": "Frequenly Asked Questions",
+    "section": "How to load a file under my project directory",
+    "text": "How to load a file under my project directory\nWhen using RStudio, we usually open a project by double clicking on the .Rproj file. This has two purposes:\n\nIt opens RStudio and directs you to the project folder.\nIt sets your working directory to this project folder.\n\nFor example, say you have an .Rproj file located under:\n\n/Users/your_name/Documents/my_project\n\nThen, your working directory starts from here. Your manipulations of files in your project only happens below this directory.\nLet’s load a csv file as an example. Say you have a file located under this directory:\n\n/Users/your_name/Documents/my_project/data/file.csv\n\nThen, to load it, run:\n\nlibrary(here)\nlibrary(readr)\n\npath &lt;- here(\"data\", \"file.csv\")\ndf &lt;- read_csv(path)\n\nThe here() function defines your project directory. Its input of \"data\" and \"file.csv\" are below this directory.\nBy running read_csv(path), your data is loaded to df.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
     "objectID": "class/8-data-frames.html",
     "href": "class/8-data-frames.html",
     "title": "Data Frames",
