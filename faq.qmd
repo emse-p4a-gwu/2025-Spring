@@ -79,3 +79,38 @@ The easiest way to get out of this is to press the "Escape" key. Do that, and yo
 
 - Did you load the package that contains `functionName`?
 - Did you spell `functionName` correctly?
+
+## How to load a file under my project directory
+
+When using RStudio, we usually open a project by double clicking on the `.Rproj` file. This has two purposes:
+
+1. It opens RStudio and directs you to the project folder.
+2. It sets your working directory to this project folder.
+
+For example, say you have an `.Rproj` file located under:
+
+```{r, eval=FALSE}
+/Users/your_name/Documents/my_project
+```
+
+Then, your working directory starts from here. Your manipulations of files in your project only happens **below** this directory.
+
+Let's load a csv file as an example. Say you have a file located under this directory:
+
+```{r, eval=FALSE}
+/Users/your_name/Documents/my_project/data/file.csv
+```
+
+Then, to load it, run:
+
+```{r, eval=FALSE}
+library(here)
+library(readr)
+
+path <- here("data", "file.csv")
+df <- read_csv(path)
+```
+
+The `here()` function defines your project directory. Its input of `"data"` and `"file.csv"` are below this directory.
+
+By running `read_csv(path)`, your data is loaded to `df`.
