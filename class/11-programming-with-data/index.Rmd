@@ -35,7 +35,7 @@ options(width = 80)
 
 class: inverse
 
-# Quiz 6
+# Quiz 9
 
 ```{r, echo=FALSE}
 countdown(
@@ -56,15 +56,6 @@ countdown(
 
 - Work alone; no outside help of any kind is allowed.
 - No calculators, no notes, no books, no computers, no phones.
-
-]
-
-.rightcol[
-
-<br>
-<center>
-<img src="https://github.com/emse-p4a-gwu/2022-Spring/raw/main/images/quiz_doge.png" width="400">
-</center>
 
 ]
 
@@ -604,6 +595,49 @@ filtered_scatter(
 filtered_scatter(
   penguins, species == "Gentoo", 
   x = body_mass_g, y = flipper_length_mm)
+```
+
+]
+
+---
+
+## Can't use {{ var }} for plot labels
+
+.leftcol55[
+
+Solution:
+
+```{r}
+var_hist <- function(df, var, bins = 30) {
+
+  # Extract variable name as text
+  var_name <- rlang::quo_text(enquo(var))  
+
+  histogram <- ggplot(df) +
+    geom_histogram(
+     aes(x = {{ var }}),
+     bins = bins,
+     fill = "steelblue", color = "black"
+    ) +
+    labs(
+      title = paste("Histogram of", var_name),
+      x = var_name,
+      y = "Frequency"
+    )
+
+  return(histogram)
+}
+```
+
+]
+
+.rightcol45[
+
+```{r}
+#| fig.height: 4
+#| fig.width: 5
+
+var_hist(mpg, hwy)
 ```
 
 ]
