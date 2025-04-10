@@ -72,7 +72,7 @@ class: inverse
 
 # Quiz 9
 
-<div class="countdown" id="timer_78f4b33a" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:3em;">
+<div class="countdown" id="timer_0c8041c6" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:3em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -549,7 +549,7 @@ filter_summary(penguins, species == 'Adelie', bill_length_mm)
 
 class: inverse
 
-<div class="countdown" id="timer_d650830d" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_6977a3dc" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -799,7 +799,7 @@ filtered_hist(diamonds, color == "J", price)
 
 class: inverse
 
-<div class="countdown" id="timer_f7af3e90" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_210eebc9" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -854,7 +854,7 @@ Solution:
 var_hist &lt;- function(df, var, bins = 30) {
 
   # Extract variable name as text
-  var_name &lt;- rlang::quo_text(enquo(var))  
+  var_name &lt;- deparse(substitute(var))
 
   histogram &lt;- ggplot(df) +
     geom_histogram(
@@ -905,7 +905,7 @@ class: inverse, center
 
 # .fancy[Break]
 
-<div class="countdown" id="timer_0dbd0663" data-warn-when="30" data-update-every="1" tabindex="0" style="top:1;right:0;bottom:0;left:0;margin:5%;font-size:8em;">
+<div class="countdown" id="timer_6230d108" data-warn-when="30" data-update-every="1" tabindex="0" style="top:1;right:0;bottom:0;left:0;margin:5%;font-size:8em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -992,7 +992,7 @@ cbind(
 )
 ```
 
-<div class="countdown" id="timer_c2f7c97d" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_27620550" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -6608,7 +6608,7 @@ map(sw_people,           ~ length(.x$films)) # supported in purrr
 
 ---
 
-<div class="countdown" id="timer_b58cb05d" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_ac476cb8" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -6650,7 +6650,7 @@ map_int(sw_people, \(x) length(x$films))
 
 ---
 
-<div class="countdown" id="timer_8b22a15a" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_1eee1910" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -7543,7 +7543,7 @@ Use `map_df()` to merge the data frames
 
 class: inverse
 
-<div class="countdown" id="timer_d800973e" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_741f8824" data-warn-when="30" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
