@@ -611,7 +611,7 @@ Solution:
 var_hist <- function(df, var, bins = 30) {
 
   # Extract variable name as text
-  var_name <- rlang::quo_text(enquo(var))  
+  var_name <- deparse(substitute(var))
 
   histogram <- ggplot(df) +
     geom_histogram(
