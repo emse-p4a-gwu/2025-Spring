@@ -1,7 +1,7 @@
-# install.package('tidyverse')
-# install.package('palmerpenguins')
-# install.package('gapminder')
-# install.package('repurrrsive')
+# install.packages('tidyverse')
+# install.packages('palmerpenguins')
+# install.packages('gapminder')
+# install.packages('repurrrsive')
 
 library(tidyverse)
 library(palmerpenguins)
