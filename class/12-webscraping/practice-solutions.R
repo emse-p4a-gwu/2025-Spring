@@ -41,12 +41,12 @@ head(df)
 
 # Practice 2 ----
 
-# Template code is provided to scrape data on F1 drivers for the 2022 season from
-# https://www.formula1.com/en/results.html/2022/drivers.html
+# Template code is provided to scrape data on F1 drivers for the 2024 season from
+# https://www.formula1.com/en/results.html/2024/drivers.html
 # 
 # Your job is to extend it to scrape the data from seasons 2010 to 2024.
 
-# Code to scrape data from a single page (the 2022 season):
+# Code to scrape data from a single page (the 2024 season):
 
 url <- "https://www.formula1.com/en/results.html/2024/drivers.html"
 
@@ -65,7 +65,7 @@ df <- df %>%
     separate(driver, into = c('first', 'last', 'abb'))
 head(df)
 
-# Now, extend this to scrape the data from seasons 2010 to 2022
+# Now, extend this to scrape the data from seasons 2010 to 2024
 
 # First, write a function to scrape data from one page
 
@@ -100,6 +100,21 @@ df <- map_df(years, \(x) get_f1_data(x))
 
 head(df)
 
+# Plot of most total points by team
+
+df %>% 
+    mutate(
+        # Merge multiple different Red Bull Racing teams
+        team = ifelse(str_detect(team, 'Red Bull Racing'), 'Red Bull Racing', team)
+    ) %>% 
+    group_by(team) %>% 
+    summarise(total_points = sum(points)) %>% 
+    arrange(desc(total_points)) %>% 
+    # Just keep top 10 teams
+    slice(1:10) %>% 
+    ggplot() +
+    geom_col(aes(x = total_points, y = reorder(team, total_points))) +
+    theme_minimal()
 
 
 # Practice 3 ----
