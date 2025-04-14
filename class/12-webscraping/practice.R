@@ -21,31 +21,31 @@ library(usethis)
 
 # Practice 2 ----
 
-# Template code is provided to scrape data on F1 drivers for the 2022 season from
-# https://www.formula1.com/en/results.html/2022/drivers.html
+# Template code is provided to scrape data on F1 drivers for the 2024 season from
+# https://www.formula1.com/en/results.html/2024/drivers.html
 # 
 # Your job is to extend it to scrape the data from seasons 2010 to 2024.
 
-# Code to scrape data from a single page (the 2022 season):
+# Code to scrape data from a single page (the 2024 season):
 
-url <- "https://www.formula1.com/en/results.html/2022/drivers.html"
+url <- "https://www.formula1.com/en/results.html/2024/drivers.html"
 
 # Get the data frame
 df_list <- read_html(url) %>% 
     html_table()
 df <- df_list[[1]]
-df$year <- 2022 # Store the year (not in the scraped data)
+df$year <- 2024 # Store the year (not in the scraped data)
 
 # Some formatting
 df <- df %>% 
     select(
         year, position = Pos, driver = Driver, nationality = Nationality, 
-        team = Car, points = PTS
+        team = Car, points = Pts
     ) %>% 
     separate(driver, into = c('first', 'last', 'abb'))
 head(df)
 
-# Now, extend this to scrape the data from seasons 2010 to 2022
+# Now, extend this to scrape the data from seasons 2010 to 2024
 
 # First, write a function to scrape data from one page
 
@@ -61,64 +61,36 @@ get_f1_data <- function(year) {
 
 
 
-# Class stock price example ----
-
-# Documentation: https://www.alphavantage.co/documentation/#dailyadj
-
-# If you want to run this, you'll have to get an API from here: 
-# https://www.alphavantage.co/support/#api-key
-
-# Store your key as ALPHAVANTAGE_API_KEY in your .Renviron:
-# usethis::edit_r_environ()
-
-api_key <- Sys.getenv("ALPHAVANTAGE_API_KEY")
-symbol <- "NFLX" # Netflix
-
-# Build the url data request
-
-url <- paste0(
-    "https://www.alphavantage.co/query", 
-    "?function=TIME_SERIES_DAILY_ADJUSTED",
-    "&symbol=", symbol, 
-    "&apikey=", api_key, 
-    "&datatype=csv"
-)
-
-# Read in the data
-
-df <- read_csv(url)
-
-df %>% 
-    ggplot() + 
-    geom_line(
-        aes(
-            x = timestamp, 
-            y = adjusted_close
-        )
-    ) + 
-    theme_bw() +
-    labs(
-        x = "Date",
-        y = "Closing Price ($USD)", 
-        title = paste0("Stock Prices: ", symbol)
-    )
-
-
 # Practice 3 ----
 
-# 1. Register for a key here: https://apidocs.covidactnow.org/
+# API Documentation: https://www.alphavantage.co/documentation/#dailyadj
 
-# 2. Use `usethis::edit_r_environ()` to edit your .Renviron
-usethis::edit_r_environ()
+# 1. Make your .env file:  
 
-# 3. Store your key as `COVID_ACT_NOW_KEY`
+file.create(".env")
 
-# 4. Load your API key
-api_key <- Sys.getenv("COVID_ACT_NOW_KEY")
+# 2. Edit your .env file:
 
-# 5. Build the url to request historical state-level data. Docs here:
-# https://apidocs.covidactnow.org/#historic-data-for-all-states-counties-or-metros
+file.edit(".env")
 
+# 3. Register for a key: https://www.alphavantage.co/support/#api-key
 
-# 6. Read in the data, then make this figure of daily COVID19 cases in DC
+# 4. Store your key, e.g. ALPHAVANTAGE_API_KEY=ZF33JCWPWWQDX4LW
 
+# 5. Load your .env file: 
+
+dotenv::load_dot_env()
+
+# 6. Load your API key:
+
+api_key <- Sys.getenv("ALPHAVANTAGE_API_KEY")
+
+# 7. Build the url to request historical stock prices for a stock of your choice
+
+url <- paste0(
+    # Write code here
+)
+    
+# 8. Read in the data, then make this a stock plot with ggplot
+
+df <- readr::read_csv(url)
