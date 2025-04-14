@@ -24,6 +24,8 @@ output:
 ```{r, child="../setup.Rmd"}
 ```
 
+---
+
 class: inverse
 
 # Quiz 10
@@ -936,7 +938,7 @@ ALPHAVANTAGE_API_KEY=ZF33JCWPWWQDX4LW
 ### 5. Load your `.env` variables:
 
 ```{r}
-#| eval: false
+#| eval: true
 
 dotenv::load_dot_env()
 ```
