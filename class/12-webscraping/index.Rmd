@@ -24,6 +24,32 @@ output:
 ```{r, child="../setup.Rmd"}
 ```
 
+class: inverse
+
+# Quiz 10
+
+```{r, echo=FALSE}
+countdown(
+  minutes      = 10,
+  warn_when    = 30,
+  update_every = 1,
+  top          = 0,
+  right        = 0,
+  font_size    = '3em'
+)
+```
+
+.leftcol[
+
+## Write your name on the quiz!
+
+## Rules:
+
+- Work alone; no outside help of any kind is allowed.
+- No calculators, no notes, no books, no computers, no phones.
+
+]
+
 ---
 
 ```{r child="topics/0.Rmd"}
@@ -783,11 +809,11 @@ url <- "https://www.formula1.com/en/results/2024/drivers"
 df_list <- read_html(url) %>% 
     html_table()
 df <- df_list[[1]]
-df$year <- 2022
+df$year <- 2024
 df <- df %>% 
     select(
         year, position = Pos, driver = Driver, nationality = Nationality, 
-        team = Car, points = PTS
+        team = Car, points = Pts
     ) %>% 
     separate(driver, into = c('first', 'last', 'abb'))
 head(df)
@@ -830,7 +856,7 @@ class: center, middle, inverse
 
 <br>
 
-## 1. Is there a formatted dataset I can download?<br>(e.g. see [this page](https://eda.seas.gwu.edu/2023-Fall/finding-data.html))
+## 1. Is there a formatted dataset I can download?<br>(e.g. see [this page](https://eda.seas.gwu.edu/2024-Fall/finding-data.html))
 
 --
 
@@ -869,26 +895,53 @@ API Request:<br>https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&sym
 
 ---
 
-## Setting up your API key
+## Set up your`.env` file
 
-### 1. Register for a key here: https://www.alphavantage.co/support/#api-key
-### 2. Store your key in your `.Renviron`:
-
-```{r}
-#| eval: false
-
-usethis::edit_r_environ()
-```
-
-### 3. Store your key:
+### 1. Make a `.env` file:
 
 ```{r}
 #| eval: false
 
-ALPHAVANTAGE_API_KEY=ka8hi45qi2j5ja657fj963
+# Create an empty .env file
+file.create(".env")
 ```
 
-### 4. Retrieve your key: 
+### 2. Open the file to edit:
+
+```{r}
+#| eval: false
+
+# Create an empty .env file
+file.edit(".env")
+```
+
+---
+
+## Store your API key
+
+### 3. Register for a key here: https://www.alphavantage.co/support/#api-key
+
+### 4. Store your key in the file:
+
+```{r}
+#| eval: false
+
+ALPHAVANTAGE_API_KEY=ZF33JCWPWWQDX4LW
+```
+
+---
+
+## Get your API key
+
+### 5. Load your `.env` variables:
+
+```{r}
+#| eval: false
+
+dotenv::load_dot_env()
+```
+
+### 6. Retrieve your key: 
 
 ```{r}
 #| eval: false
@@ -997,38 +1050,31 @@ countdown(
 )
 ```
 
-### Your turn: COVID case data from https://covidactnow.org/
+### Your turn
 
-1. Register for a key here: https://apidocs.covidactnow.org/
-2. Edit your .Renviron:<br>`usethis::edit_r_environ()`
-3. Store your key as `COVID_ACT_NOW_KEY`
-4. Load your API key:<br>`api_key <- Sys.getenv("COVID_ACT_NOW_KEY")`
-5. Build the url to request historical state-level data
-6. Read in the data, then make this figure of daily COVID19 cases in DC
+.leftcol55[.font80[
+
+1. Make your .env file:<br>`file.create(".env")`
+1. Edit your .env file:<br>`file.edit(".env")`
+1. Register for a key: https://www.alphavantage.co/support/#api-key
+1. Store your key, e.g. `ALPHAVANTAGE_API_KEY=ZF33JCWPWWQDX4LW`
+1. Load your .env file: `dotenv::load_dot_env()`
+1. Load your API key:<br>`api_key <- Sys.getenv("ALPHAVANTAGE_API_KEY")`
+1. Build the url to request historical stock prices for a stock of your choice
+1. Read in the data, then make this a stock plot with ggplot
+
+]]
+
+.rightcol45[
 
 ```{r}
 #| echo: false
-#| label: 'covid_dc'
-#| fig.height: 3
-#| fig.width: 12
-
-api_key <- Sys.getenv("COVID_ACT_NOW_KEY")
-url <- paste0(
-    "https://api.covidactnow.org/v2/states.timeseries.csv?apiKey=",
-    api_key
-)
-df <- read_csv(url)
-df %>% 
-    filter(state == "DC") %>% 
-    ggplot() + 
-    geom_line(
-        aes(
-            x = date, 
-            y = actuals.newCases
-        )
-    ) + 
-    theme_bw()
+#| ref.label: 'stocks'
+#| fig.height: 5
+#| fig.width: 7
 ```
+
+]
 
 ---
 
