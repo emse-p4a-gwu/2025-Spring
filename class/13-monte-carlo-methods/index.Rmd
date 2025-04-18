@@ -26,43 +26,6 @@ output:
 
 ---
 
-class: inverse
-
-# Quiz 7
-
-```{r, echo=FALSE}
-countdown(
-  minutes      = 10,
-  warn_when    = 30,
-  update_every = 1,
-  top          = 0,
-  right        = 0,
-  font_size    = '3em'
-)
-```
-
-.leftcol[
-
-## Write your name on the quiz!
-
-## Rules:
-
-- Work alone; no outside help of any kind is allowed.
-- No calculators, no notes, no books, no computers, no phones.
-
-]
-
-.rightcol[
-
-<br>
-<center>
-<img src="https://github.com/emse-p4a-gwu/2022-Spring/raw/main/images/quiz_doge.png" width="400">
-</center>
-
-]
-
----
-
 class: center
 
 # Monte Carlo, Monaco
@@ -913,8 +876,8 @@ In this simulation, the prize is always behind door #1:
 
 --
 
-### 1) Please fill the GW course feedback (see slack announcement)
+### 1) Please fill the [GW course feedback](https://gwu.smartevals.com/) (see slack announcement)
 
 --
 
-### 2) Final is [Thursday, May 09, 3:00pm-5:00pm](https://my.gwu.edu/mod/exam_schedules/?x=E)
+### 2) Final is [Thursday, May 08, 3:00pm-5:00pm, same room](https://my.gwu.edu/mod/exam_schedules/?x=E)
